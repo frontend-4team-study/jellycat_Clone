@@ -41,6 +41,60 @@
       .animation {
         width: 100%;
       }
+
+      /* 피자, 햄버거.. 인형들 */
+
+      .doll_main {
+        padding: 8px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .dolls img {
+        width: 100%;
+        height: auto;
+      }
+
+      .dolls_a {
+        text-decoration-line: none;
+      }
+
+      .dolls_name {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #22272a;
+        margin-bottom: 30px;
+      }
+
+      button {
+        position: absolute;
+        display: none;
+        border-radius: 4px;
+        border: 0;
+        margin: 0 8px;
+        padding: 16px;
+        background: #41c2d5;
+        text-align: center;
+        font-weight: 600;
+        color: #242526;
+        width: 350px;
+      }
+
+      .dolls:hover {
+        border: #ececec 0.5px solid;
+      }
+
+      .dolls:hover button {
+        display: block;
+        bottom: 20px;
+      }
+
+      .buyme_button:hover {
+        background-color: #72cddb;
+      }
     </style>
   </head>
   <body>
@@ -72,7 +126,74 @@
         </video>
       </div>
       <div>View our Jellycat Amuseables collection 랑 클릭버튼</div>
-      <div>피자, 햄버거사진들</div>
+
+      <span class="doll_main">
+        <span class="dolls">
+          <a
+            class="dolls_a"
+            href="https://www.jellycat.com/eu/amuseable-slice-of-pizza-a2sop/"
+          >
+            <img
+              src="https://www.jellycat.com/images/products/medium/A2SOP.jpg"
+            />
+            <div class="dolls_name">
+              Amsuseable Slice Pizza
+              <button class="buyme_button">BUY ME</button>
+            </div>
+          </a>
+
+          <div class="dolls_name">€35.00</div>
+        </span>
+
+        <span class="dolls">
+          <a
+            class="dolls_a"
+            href="https://www.jellycat.com/eu/amuseable-burger-a2bu/"
+          >
+            <img
+              src="https://www.jellycat.com/images/products/medium/A2BU.jpg"
+            />
+            <div class="dolls_name">
+              Amsuseable Burger
+              <button class="buyme_button">BUY ME</button>
+            </div>
+          </a>
+          <div class="dolls_name">€38.00</div>
+        </span>
+
+        <span class="dolls">
+          <a
+            class="dolls_a"
+            href="https://www.jellycat.com/eu/amuseable-peanut-a6pe/"
+          >
+            <img
+              src="https://www.jellycat.com/images/products/medium/A6PE.jpg"
+            />
+            <div class="dolls_name">
+              Amsuseable Peanut
+              <button class="buyme_button">BUY ME</button>
+            </div>
+          </a>
+          <div class="dolls_name">€19.00</div>
+        </span>
+
+        <span class="dolls">
+          <a
+            class="dolls_a"
+            href="https://www.jellycat.com/eu/amuseable-pain-au-raisin-a6parai/"
+          >
+            <img
+              src="https://www.jellycat.com/images/products/medium/A6PARAI.jpg"
+            />
+            <div class="dolls_name">
+              Amsuseable Pain Au Raisin
+              <button class="buyme_button">BUY ME</button>
+            </div>
+          </a>
+          <div class="dolls_name">€23.00</div>
+        </span>
+      </span>
+
       <div>기린</div>
       <div>꽃게? 주호민 most loved</div>
       <div>Bashful Favourites</div>
