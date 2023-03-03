@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>젤리캣 메인화면</title>
+    <style>
+      /* all */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* header */
+
+      .main_grid {
+        height: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #41c2d5;
+      }
+
+      .main_a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration-line: none;
+        color: #22272a;
+      }
+
+      /* animation */
+
+      .animation {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="main_grid">
+        <a class="main_a" href="https://jellycathelp.zendesk.com/hc/en-gb"
+          >Need Help?</a
+        >
+        <a
+          class="main_a"
+          href="https://jellycathelp.zendesk.com/hc/en-gb/articles/6197990920209-What-are-your-gift-options-"
+          >Free Gift Message</a
+        >
+        <a
+          class="main_a"
+          href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery"
+          >Delivery Information</a
+        >
+      </div>
+      <div>
+        호령 제작 공간
+      </div>
+    </header>
+    <main>
+      <div>
+        <video class="animation" autoplay muted>
+          <source
+            type="video/mp4"
+            src="https://www.jellycat.com/images/video/FAST_FOOD_VIDEO_MAIN.MP4"
+          />
+        </video>
+      </div>
+      <div>View our Jellycat Amuseables collection 랑 클릭버튼</div>
+      <div>피자, 햄버거사진들</div>
+      <div>기린</div>
+      <div>꽃게? 주호민 most loved</div>
+      <div>Bashful Favourites</div>
+      <div>토끼 인형</div>
+      <div>Recently Viewed,토끼인형하나</div>
+      <div>Jellycat Newsletter, 검색창</div>
+    </main>
+    <footer>맨아래(영어 개많음!)</footer>
+  </body>
+</html>
