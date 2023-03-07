@@ -9,17 +9,22 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
         $(function(){
-        const rate = 4.6;
+        const rate = 0.4;
         const max = 5;
         const percent = rate/max*100;
         $("#review").find("#back-score").css("width",percent+"%");
         });
+        function changeImage(filename){
+           let img= document.querySelector('#big-img');
+           img.setAttribute("src",filename);
+
+        }
     </script>
   
 </head>
 <body>
     <header></header>
-    
+
     <main>
     <div class="cartegories">
         <a href="https://www.jellycat.com/eu/softtoys/" class="big-categories">Collections / </a>
@@ -27,13 +32,15 @@
     </div>
     <div class="big-item-box"> 
         <div>
-            <ul class="side-small-imgs">
-                <li class="item-imgs"><input type="radio" name="doll" checked><img src="https://www.jellycat.com/images/products/thumbnail/PNM3PN.jpg" alter="Option 1"/></li>
-                <li class="item-imgs"><input type="radio" name="doll"/> <img src="https://www.jellycat.com/images/products/thumbnail/PNM3PN_1.jpg" alter="Option 2"/></li>
-                <li class="item-imgs"><input type="radio" name="doll"/><img src="https://www.jellycat.com/images/products/thumbnail/PNM3PN_2.jpg" alter = "Option 3"/></li>
-            </ul>
+            <div class="side-small-imgs">
+                <li class="item-imgs"><button class ="itembutton" onclick="changeImage('https://www.jellycat.com/images/products/large/PNM3PN.jpg')"><img id = "image1" src="https://www.jellycat.com/images/products/thumbnail/PNM3PN.jpg" alter="Option 1"/></button></li>
+                <li class="item-imgs"><button onclick="changeImage('https://www.jellycat.com/images/products/large/PNM3PN_1.jpg')"type ="button"><img id = "image2" src="https://www.jellycat.com/images/products/thumbnail/PNM3PN_1.jpg" alter="Option 2"/></button></li>
+                <li class="item-imgs"><button  onclick="changeImage('https://www.jellycat.com/images/products/large/PNM3PN_2.jpg')" type ="button"><img id = "image3" src="https://www.jellycat.com/images/products/thumbnail/PNM3PN_2.jpg" alter = "Option 3"/></button></li>
+            </div>
         </div>
         <img src="https://www.jellycat.com/images/products/large/PNM3PN.jpg" id="big-img">
+        
+      
         <div class="sellform">
             <div class="top-item-select">
                 <div>
@@ -46,11 +53,11 @@
                             <a id="front-score">☆☆☆☆☆</a>
                             <a id="back-score">★★★★★</a>
                             </div>
-                            <a id="review">(43)</a>
-                            <a id="review" href="#">WRITE YOUR REVIEW</a>
+                            <a id="reviewnumber">(43)</a>
+                            <a id="write-review" href="#">WRITE YOUR REVIEW</a>
                         </div>
                     </div>
-                    <p>Waddle this way!</p>
+                    <p id="waddle">Waddle this way!</p>
                 </div>
                 
             </div>
@@ -58,12 +65,31 @@
                 <p id="colour">COLOUR</p>
                 <input id ="img-in-colour" type="image" src="https://www.jellycat.com/images/products/large/PNM3PN.jpg"/>
                 </div> 
-            <div class="size">
                 <p id="sizetext">SIZE</p>
-                <div class="size-select">
-                    <div id="large-size-box"  class="text-align-center"><input name="size" type="radio" id="large-size">LARGE - H34 X W20</div>
+            <div class="container">
+                <div class="radio-tile-group">
+  
+                  <div class="input-container" id="large">
+                    <input id="large-box" type="radio" name="radio">
+                    <div class="radio-tile">
+                      <label for="large">LARGE - H34 X W20</label>
+                    </div>
+                  </div>
+                <div class="input-container" id="medium">
+                    <input id="medium-box" type="radio" name="radio" checked>
+                    <div class="radio-tile">
+                        <label for="medium">MEDIUM - H23 X W10</label>
+                    </div>
+                </div>
+                <div class="input-container" id ="small">
+                    <input id="small-box" type="radio" name="radio">
+                    <div class="radio-tile">
+                         <label for="small">SMALL - H11 X W6 CM</label>
+                    </div>
+                </div>
+                    <!-- <div id="large-size-box"  class="text-align-center"><input name="size" type="radio" id="large-size">LARGE - H34 X W20</div>
                     <div id="medium-size-box" class="text-align-center"><input name="size" type="radio"id="medium-size" checked>MEDIUM - H23 X W10</div>
-                    <div id="small-size-box" class="text-align-center"><input name="size" type="radio"id="small-size">SMALL - H11 X W6 CM</div>
+                    <div id="small-size-box" class="text-align-center"><input name="size" type="radio"id="small-size">SMALL - H11 X W6 CM</div> -->
                 </div>
             </div>
             <ul class="buyoraddinwishlist">

@@ -37,6 +37,11 @@
     width: 40%;
     height:30%;
 }
+#item-code{
+    color: gray;
+    font-size: 13px;
+    margin-top: 10px;
+}
 .sellform{
     width: 100%;
     margin: 0 0 0 20px;
@@ -48,7 +53,12 @@ padding: 20px 0;
 .price-and-review{
     display: flex;
     justify-content: space-between; 
-    margin: 10px;
+    margin: 10px 0 ;
+}
+#reviewnumber{font-size: 13px;}
+#write-review{
+color: gray;
+font-size: 13px;
 }
 .score{
     position: relative;
@@ -61,40 +71,18 @@ padding: 20px 0;
 #item-price{
     font-size: 25px;
 }
+#colour{
+    font-size: 14px ;
+    margin: 30px 0 10px 0;
+}
 .colour{
     margin:  10px 0;
 }
 #img-in-colour{
-border: 1px solid rgb(199, 199, 199);
+border: 2.5px solid black;
+width: 64px;
 }
-.size{
-    margin: 10px 0;
-}
-.size-select{
-    display: flex;
-    margin: 10px 0 40px 0;
-}
-#large-size-box{
-    border: 1px solid gray;
-    height : 81px;
-    width: 96px;
-    font-size: 13px; 
-}
-#medium-size-box{
-    border: 1px solid gray; 
-    height : 96px;
-    
-    width: 98px;
-    margin: 0px  10px;
-    font-size: 13px; 
-}
-#small-size-box{
-    border: 1px solid gray;
-    height: 81.19px;
-    width: 96px;
-    margin: 0px  10px 0 0;
-    font-size: 13px; 
-}
+
 .text-align-center{
     display: flex   ;
     align-items: center;
@@ -104,6 +92,62 @@ div > input {
     width: 100%;
     height: 100%;
 }
+.container {
+    display: flex;
+  }
+  .radio-tile-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #large {
+    width: 96px;    
+    height: 83.19px;
+    margin: 10px 10px 0 0;
+  }
+  #medium{
+    width: 96px;
+    height: 96.78px;
+    margin: 10px 10px 0 0;
+  }
+  #small{
+    width: 96px;    
+    height: 81.19px;
+    margin: 10px 10px 0 0;
+  }
+  .input-container input {
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .input-container .radio-tile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid gray;
+    padding: 0 5px;
+  }
+  
+  .input-container label {
+    color: gray;
+    font-size: 0.80rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  input:checked+.radio-tile {
+    border: 2.5px solid black;
+  }
+  input:checked+.radio-tile label {
+    color: black;
+    font-weight: 1000;
+  }
 
 .buyoraddinwishlist{
     border-top: 1px solid rgb(160, 159, 159);
@@ -117,12 +161,10 @@ div > input {
     padding: 8px 80px;
     font-weight: 1000;
     font-size: 18px;
-
 }
 #buy-me:hover{
     background-color: #a8e9e9;
     transition: all ease 1s 0s;
-    
 }
 #Added-to-wishlist{
     border: 5px solid var(--primary-color);
@@ -131,7 +173,6 @@ div > input {
     font-weight: 1000;
     font-size: 18px;
     margin: 0 10px ;
-    /* display: none; */
 }
 
 
