@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            overflow-x: hidden;
+            text-decoration-line: none;
+            color: #242526;
+        
+        }
+        :root{
+            --primary-color:#41C2D5;
+            --primary-font:'Josefin Sans', sans-serif;
+        }
+
+        /* header */
+
+        header{
+            font-family: var(--primary-font)
+        }
+
+      .main_grid {
+        height: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: var(--primary-color);
+      }
+
+      .main_a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #22272a;
+      }
+        
+        /*main*/
+        .main_grid{
+            background-color: var(--primary-color);
+        }
+
+        .product_details{
+            background-color: #fafafa;
+        }
+
+        /*Reviews*/
+        .reviews{
+            height: 1250px;
+            font-family: var(--primary-font);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .reviews_top{
+            height: 200px;
+            padding-top: 50px;
+        }
+
+        .reviews_top #reviews{
+            font-size: 30px;
+            padding-left: 27%;
+        }
+
+        .reviews_top #please{
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -1px;
+            margin-top: 15px;
+        }
+
+        .reviews_top button{
+            position: absolute;
+            left: 80%;
+            top: 4%;
+            width: 200px;
+            height: 41px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            font-family: var(--primary-font);
+            font-size: 17px;
+        }
+
+        .reviews_top button:hover{
+            background-color: rgba(65, 194, 213, 40%);
+            transition: all 0.5s;
+        }
+
+        .contents{
+            border-top: solid 1px #eee;
+            width: 78rem;
+            padding: 10px 0 30px 0;
+        }
+
+        .contents_top{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contents_topLeft{
+            font-size: 20px;
+        }
+
+        .contents_topRight{
+            color: #666666;
+            font-weight: bolder;
+            font-style: italic;
+        }
+        .original button {
+            width: 500px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FDA139;
+            font-family: var(--primary-font);
+            font-size: 15px;
+        }
+
+        .original button:hover{
+            background-color: #ff8700;
+            transition: all 0.5s;
+        }
+
+        .original button a{
+            color: #fff;
+        }
+
+
+        /*Meet My Little Legs Friends*/
+
+        .friends{
+            height: 650px;
+            font-family: var(--primary-font);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .friends_title{
+            margin-bottom: 2%;
+        }
+
+        .friends_title a{
+            font-family: var(--primary-font);
+            border: none;
+            background-color: #fff;
+            height: 50px;
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        .slide_wrapper{
+            position: relative;
+            width: 100vw;
+            height: 500px;
+            overflow: hidden; 
+        }
+        
+        .slides{
+            position: absolute;
+            top: 0;
+            display: flex;
+        }
+
+        .slides.animated{
+            transition: left 0.5s ease-out;
+        }
+
+        .slides li{
+            width: 380px;
+            height: 480px;
+        }
+
+        .slides li:hover{
+            border: solid 1px #eee;
+        }
+
+        .dolls a img{
+            width: 364px;
+            height: 364px;
+        }
+
+        .dolls a span{
+            display: flex;
+            flex-direction: column;
+            line-height: 50px;
+            text-align: center;
+        }
+        .friends .arrows{
+            position: absolute;
+            top: 50%;
+        }
+        
+        .friends .left_arrow{            
+            left: 1%;
+        }
+
+        .friends .right_arrow{
+            left: 97%;
+        }
+        
+        /*Jellycat Newsletter*/
+        .newsletter{
+            height: 280px;
+            font-family: var(--primary-font);
+            border-top: solid 6px var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #news_1{
+            margin-top: 10px;
+            margin-bottom: -20px;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+        
+        #news_2{
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: -20px;
+        }
+
+        #news_3{
+            font-size: 15px;
+            text-align: center;
+            line-height: 25px;
+            margin-bottom: -15px;
+        }
+
+        .newsletter .sign{
+            margin-bottom: 10px;
+        }
+
+        .newsletter .sign input{
+            width: 350px;
+            height: 40px;
+            border: solid 1px #ddd;
+        }
+
+        .newsletter .sign button{
+            width: 150px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            border: none;
+            font-family: var(--primary-font);
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /*footer*/
+        footer{
+            height: 296px;
+            background-color: var(--primary-color);
+            font-size: 16px;
+            font-family: var(--primary-font);        
+            position: relative;
+        }
+
+        .footer_grid{
+            position: absolute;
+            top: 10%;
+            left: 13%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .footer_title{
+            display: inline-block;
+            font-weight: bold;     
+            margin-bottom: 10px;       
+        }
+
+        .footer_list{
+            list-style: none;
+            font-weight: 400;
+            padding-left: 0;    
+            line-height: 32px;
+            margin-right: 50px;
+        }
+
+        #paraspar{
+            position: absolute;
+            font-weight: 400;
+            color: #999999;
+            display: block;
+            text-align: right;
+            top: 90%;
+            left: 75%;
+        }
