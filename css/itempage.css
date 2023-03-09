@@ -8,6 +8,7 @@
             overflow-x: hidden;
             text-decoration-line: none;
             color: #242526;
+            font: var(--primary-font);
         
         }
         :root{
@@ -18,28 +19,31 @@
         /* header */
 
         header{
-            font-family: var(--primary-font)
+            font-family: var(--primary-font);
+            position: fixed;
+            width: 100%;
+            z-index: 1;
         }
 
-      .main_grid {
-        height: 40px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        background-color: var(--primary-color);
-      }
-
-      .main_a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #22272a;
-      }
-        
-        /*main*/
-        .main_grid{
+        .main_grid {
+            height: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             background-color: var(--primary-color);
         }
 
+        .main_a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #22272a;
+        }
+      
+        header p{
+            background-color: #fff; 
+        }
+
+        /*main*/
         .product_details{
             background-color: #fafafa;
         }
@@ -55,7 +59,7 @@
         }
 
         .reviews_top{
-            height: 200px;
+            height: 110px;
             padding-top: 50px;
         }
 
@@ -71,7 +75,7 @@
             margin-top: 15px;
         }
 
-        .reviews_top button{
+        #openBtn{
             position: absolute;
             left: 80%;
             top: 4%;
@@ -86,6 +90,172 @@
 
         .reviews_top button:hover{
             background-color: rgba(65, 194, 213, 40%);
+            transition: all 0.5s;
+        }
+
+        #modal_bg{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(36,37,38,0.6);
+            z-index: 1;
+        }
+
+        .modal_body{
+            display: none;
+            width: 580px;
+            position: absolute;
+            top: 5%;
+            left: 30%;
+            z-index: 2;
+            font: var(--primary-font);
+        }
+
+        #closeBtn{
+            display: inline-block;
+            background-color: var(--primary-color);
+            width: 102px;
+            height: 40px;
+            border: none;
+            border-radius: 5px 5px 0 0;
+            font-size: 16px;
+            margin-left: 82.5%;
+        }
+
+        .modal_contents{
+            background-color: #fff;
+            height: 660px;
+            padding: 3% 0 0 3%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #modal_title{
+            font-size: 20px;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        #rating{
+            color: #999999;
+            font-size: 13px;
+        }
+
+        .modal_contents textarea{
+            margin-top: 30px;
+            height: 130px;
+        }
+        .modal_contents textarea::placeholder{
+            color: #ddd;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 1% 0 0 1%;
+        }
+
+        .modal_contents input{
+            border: none;
+            width: 545px;
+            height: 40px;
+        }
+
+        .modal_contents input::placeholder{
+            color: #ddd;
+            font-size: 15px;
+            font-weight: 400;
+            padding-left: 1%;
+        }
+
+        .hoverLine{
+            width: 545px;
+            color: #ddd;
+            border: solid 1px #ddd;
+            margin-bottom: 10px;
+        }
+
+        .hoverLine:hover{
+            border-color: #242526;
+        }
+
+        #recommendation{
+            color: #242526;
+            font-size: 14px;
+            letter-spacing: -1px;
+        }
+
+        .modal_contents select{
+            color: #242526;
+            height: 40px;
+        }
+        .modal_contents select option{
+            color: #242526;
+        }
+        .robot{
+            width: 320px;
+            height: 70px;
+            background-color: #f9f9f9;
+            border: solid 1px #d3d3d3;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .robot input{
+            width: 30px;
+            position: absolute;
+            left: 10px;
+            top: 12px;
+        }
+
+        .robot label{
+            position: absolute;
+            left: 50px;
+            top: 23px;
+            font-size: 14px;
+        }
+        
+        .robot img{
+            width: 32px;
+            height: 32px;
+            padding-left: 85%;
+            margin-top: 7px;
+        }
+
+        #logoText{
+            font-size: 8px;
+            color: #555;
+            margin-left: 80%;
+        }
+
+        .robot a{
+            font-size: 10px;
+            color: #555;
+        }
+
+        #privacy{
+            margin-left: 70%;
+        }
+
+        .robot a:hover{
+            text-decoration-line: underline;
+        }
+
+        #continueBtn{
+            width: 545px;
+            height: 40px;
+            color: #fff;
+            background-color: #666666;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+
+        }
+
+        #continueBtn:hover{
+            background-color: #999999;
             transition: all 0.5s;
         }
 
@@ -117,6 +287,7 @@
             background-color: #FDA139;
             font-family: var(--primary-font);
             font-size: 15px;
+            margin-left: 30%;
         }
 
         .original button:hover{
@@ -244,7 +415,7 @@
             border: solid 1px #ddd;
         }
 
-        .newsletter .sign button{
+        #signBtn{
             width: 150px;
             height: 40px;
             background-color: var(--primary-color);
@@ -255,6 +426,14 @@
             font-weight: bold;
         }
 
+        #emailError{
+            display: none;
+            color: #c92929;
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: -0.5px;
+            padding-top: 10px;
+        }
         /*footer*/
         footer{
             height: 296px;
