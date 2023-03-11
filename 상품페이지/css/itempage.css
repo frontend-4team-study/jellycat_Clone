@@ -16,38 +16,6 @@
             --primary-font:'Josefin Sans', sans-serif;
         }
 
-        /* header */
-
-        header{
-            font-family: var(--primary-font);
-            position: fixed;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .main_grid {
-            height: 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            background-color: var(--primary-color);
-        }
-
-        .main_a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #22272a;
-        }
-      
-        header p{
-            background-color: #fff; 
-        }
-
-        /*main*/
-        .product_details{
-            background-color: #fafafa;
-        }
-
         /*Reviews*/
         .reviews{
             height: 1000px;
