@@ -17,8 +17,24 @@
         function changeImage(filename){
            let img= document.querySelector('#big-img');
            img.setAttribute("src",filename);
-
         }
+        function changelarge() {
+        document.getElementById("item-price").innerHTML = "€42.00";
+        document.getElementById("item-code").innerHTML = "PNL2PN";
+        }
+        function changemedium() {
+        document.getElementById("item-price").innerHTML = "€28.00";
+        document.getElementById("item-code").innerHTML = "PNM3PN";
+        }
+        function changesmall() {
+        document.getElementById("item-price").innerHTML = "€14.50";
+        document.getElementById("item-code").innerHTML = "PNS3PN";    
+        } 
+         function changeaddtowishlist() {
+        document.getElementById("Added-to-wishlist").innerHTML = "Added-to-wishlist";
+        }
+        
+
     </script>
   
 </head>
@@ -70,43 +86,81 @@
                 <div class="radio-tile-group">
   
                   <div class="input-container" id="large">
-                    <input id="large-box" type="radio" name="radio">
+                    <input id="large-box" type="radio" name="radio" onclick = "changelarge()">
                     <div class="radio-tile">
-                      <label for="large">LARGE - H34 X W20</label>
+                      <label for="large">LARGE - H34 X W20 CM</label>
                     </div>
                   </div>
                 <div class="input-container" id="medium">
-                    <input id="medium-box" type="radio" name="radio" checked>
+                    <input id="medium-box" type="radio" name="radio"  onclick = "changemedium()" checked>
                     <div class="radio-tile">
-                        <label for="medium">MEDIUM - H23 X W10</label>
+                        <label for="medium">MEDIUM - H23 X W10 CM</label>
                     </div>
                 </div>
                 <div class="input-container" id ="small">
-                    <input id="small-box" type="radio" name="radio">
+                    <input id="small-box" type="radio" name="radio" onclick = "changesmall()">
                     <div class="radio-tile">
                          <label for="small">SMALL - H11 X W6 CM</label>
                     </div>
                 </div>
-                    <!-- <div id="large-size-box"  class="text-align-center"><input name="size" type="radio" id="large-size">LARGE - H34 X W20</div>
-                    <div id="medium-size-box" class="text-align-center"><input name="size" type="radio"id="medium-size" checked>MEDIUM - H23 X W10</div>
-                    <div id="small-size-box" class="text-align-center"><input name="size" type="radio"id="small-size">SMALL - H11 X W6 CM</div> -->
-                </div>
+            </div>
             </div>
             <ul class="buyoraddinwishlist">
                 <li class="buy-or-add-wishlist-buttons"><a id="buy-me" href="#">Buy Me</a></li>
-                <li class="buy-or-add-wishlist-buttons"><a id="Added-to-wishlist" href="#">Added to wishlist</a></li>
+                <li class="buy-or-add-wishlist-buttons"><a id="Added-to-wishlist" href="#"onclick = "changeaddtowishlist()" >Add to wishlist</a></li>
             </ul>
+            <div class="in-out-stock">
+                <img id="checkicon" src="https://cdn.pixabay.com/photo/2017/03/28/01/46/check-mark-2180770__340.png"/>
+                In stock
+            </div>
         </div>
     </div>
-    <div>
-        <div>Product Details</div>
-        <div>
-            <div>
-                Adorable, snuggly and very, very cosy, let’s welcome the wonderful Peanut Penguin! Vintage-inspired in the baby-softest fur, he’s got icebergs full of cute charisma! Toddlers will love his friendly face and fuzzy flippers. Time to shake a tail feather and slide across the snow!
+    <div class="details-great-big-box">
+    <div class="details-big-box">
+        <div class="title-of-product-detail">Product Details</div>
+        <div class="details-middle-box">
+            <div id="detail-outside-box">
+                <div id="detail-inside-box">
+                    Adorable, snuggly and very, very cosy, let’s welcome the wonderful Peanut Penguin! Vintage-inspired in the baby-softest fur, he’s got icebergs full of cute charisma! Toddlers will love his friendly face and fuzzy flippers. Time to shake a tail feather and slide across the snow!
+                </div>
             </div>
-
+            <div class="details-summary">
+                <div class="toggle-container" id="medium">
+                    <input id="safety-toggle" type="radio" name="summary">
+                    <div class="summary-box">
+                        <label for="safety">SAFETY & CARE</label>
+                    </div>
+                </div>
+                    <div id="safety-and-care-content">
+                        <ul id="safety-and-care">
+                            <li>Tested to and passes the European Safety Standard for toys: EN71 parts 1, 2 & 3 for all ages. </li>
+                            <li >Suitable from birth. Huge and Large sizes - please do not leave in a cot/ crib.</li>
+                            <li>Hand wash only; do not tumble dry, dry clean or iron. Not recommended to clean in a washing machine.</li>
+                            <li>Check all labels upon arrival of purchase.</li>
+                        </ul>
+                    </div>
+                        <div class="toggle-container" id="medium">
+                            <input id="return-toggle" type="radio" name="summary">
+                            <div class="summary-box">
+                                <label for="return">RETURNS</label>
+                            </div>
+                        </div>
+                            <div id="returns-content">
+                            If after placing your order, you change your mind, or need to cancel or return your order for any reason, we will endeavour to make the process as simple, efficient and trouble free as we can. We offer you the opportunity to return your item for a refund within 60 days from the date you received it.
+                            *Please note: we are unable to refund or exchange items that have been personalised.
+                            <a href="#"> More information can be found in our Returns and Cancellations Policy ></a>
+                            </div>  
+                    <div id="delivery-toggle">DELIVERY INFORMATION</div>
+                        <div id="delivery-content">     
+                            *Please allow an extra 7 days onto your expected delivery time for any personalised items, to allow our team time to embroider your item.
+                            To find out more about our available delivery methods such as our overseas options, pricing and timescales, please refer to our delivery page where you can find out all available options, along with all other delivery related questions.
+                            <a href="#">For more information, please see our Delivery Section ></a>
+                        </div>
+           
+                      
         </div>
-
+    </div>
+    </div>
     </div>
 </main>
 <div class="reviews">
