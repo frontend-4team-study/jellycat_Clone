@@ -6,6 +6,7 @@ let slideWidth = 380;
 let leftBtn = document.querySelector('.left_arrow');
 let rightBtn = document.querySelector('.right_arrow');
 
+
     function moveSlide(num){
         slides.style.left = -num * slideWidth + 'px';
         currentIdx = num;
