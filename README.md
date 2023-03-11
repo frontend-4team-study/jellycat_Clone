@@ -16,10 +16,9 @@
   - 버튼 클릭 시 페이지 상단으로 올라가지 않도록 구현
 ---
 ## 수정필요사항
-1. ~~Reviews~~ Show More 버튼 구현
-2. Reviews 별 이미지 추가
+1. ~~Reviews, Show More 버튼 구현~~
+2. ~~Reviews 별 이미지 추가~~
 3. ~~Write a Review 모달 창 구현~~
-4. Meet My Little Legs Friends / Recently Viewed 버튼 구현
+4. ~~Meet My Little Legs Friends / Recently Viewed 버튼 구현~~
 5. Dolls에 hover 시 Buy Me 버튼 나타나게 하기
-6. Dolls에 hover 할 때만 화살표 나타나게 하기
-7. ~~이미지 슬라이드 세부 조정~~
+6. ~~이미지 슬라이드 세부 조정~~
