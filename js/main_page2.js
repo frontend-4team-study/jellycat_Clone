@@ -9,16 +9,6 @@ let rightBtn = document.querySelector('.right_arrow');
     function moveSlide(num){
         slides.style.left = -num * slideWidth + 'px';
         currentIdx = num;
-        // if(currentIdx == slideCount+3 || currentIdx == -slideCount){
-        //     setTimeout(function(){
-        //         slides.classList.remove('animated');
-        //         slides.style.left = '0px';
-        //         currentIdx = 0;
-        //     }, 100);
-        //     setTimeout(function(){
-        //         slides.classList.add('animated');
-        //     }, 200);
-        // }
     }
 
     rightBtn.addEventListener('click', function(){
