@@ -10,7 +10,6 @@
     <style>
       
         * {
-<<<<<<< HEAD
           font-family: NeueKabelW01-Regular, sans-serif;
           padding: 0;
           margin: 0;
@@ -420,339 +419,6 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-=======
-            font-family: NeueKabelW01-Regular, sans-serif;
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        /* header */
-        .main_grid {
-            height: 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            background-color: #41c2d5;
-        }
-        .main_a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration-line: none;
-            color: #22272a;
-        }
-        /* animation */
-        .animation {
-          width: 100%;
-        }
-        /* 피자, 햄버거.. 인형들 */
-        .doll_main {
-            padding: 8px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        .dolls img {
-            width: 100%;
-            height: 100%;
-        }
-        .dolls_a {
-            text-decoration-line: none;
-        }
-        .dolls_name {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #22272a;
-            margin-bottom: 30px;
-        }
-        button {
-            position: absolute;
-            display: none;
-            border-radius: 4px;
-            border: 0;
-            margin: 0 8px;
-            padding: 16px;
-            background: #41c2d5;
-            text-align: center;
-            font-weight: 600;
-            width: 100%;
-            letter-spacing: 1px;
-        }
-        .dolls:hover {
-            border: #ececec 0.5px solid;
-        }
-        .dolls:hover button {
-            display: block;
-            animation-name: move;
-            animation-duration: 0.5s;
-            transform: translateY(-35px);
-        }
-        @keyframes move {
-            0% {
-            transform: translateY(0px);
-            }
-            100% {
-            transform: translateY(-35px);
-            }
-        }
-        .buyme_button:hover {
-            background-color: #72cddb;
-        }
-        .slick-arrow:hover {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.7);
-            top: calc(50% - 20px);
-            z-index: 0;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1;
-        }
-        /* 3개짜리 이미지 화면 */
-        .big_dolls {
-          display: flex;
-          margin-top: 2%;
-        }
-        .big_dolls_page {
-          position: relative;
-          display: inline-block;
-          width: 100%;
-          max-width: 33.99%;
-          margin:7px;
-        }
-        .big_dolls_a_page {
-          text-decoration: none;
-        }
-        .big_dolls_page img {
-          width: 100%;
-          height: 100%;
-        }
-        .big_dolls_name_btn {
-          position: absolute;
-          bottom: 25%;
-          left: 14%;
-          transform: translate(-50%, -480%);
-          color: black;
-        }
-        .big_dolls_name {
-          font-size: 36px;
-          margin: 0px 20px 0px 0px;
-        }
-        .big_dolls_btn {
-          font-size: 15px;
-          border: #41c2d5 1px solid;
-          background-color: #41c2d5;
-          padding: 8px 0px;
-          margin: 10px 0px;
-          width: 100px;
-          text-align: center;
-        }
-        .big_dolls_btn:hover {
-          background-color: white;
-          border: #41c2d5 1px solid;
-        }
-        /* 상단 이동 버튼 */
-        .btn_gotop {
-          display: block;
-          position: fixed;
-          bottom: 35px;
-          right: 30px;
-          z-index: 999;
-          outline: none;
-          cursor: pointer;
-          padding: 30px 0px;
-          border-radius: 100%;
-          border: 0;
-        }
-        .btn_gotop img {
-          width: 50px;
-          height: 50px;
-        }
-        /* ============================================= */
-        header{
-          width: 100%;
-          position: fixed;
-          top: 0;
-        }
-        #second_menu{
-          padding: 0 0 0 0;
-          background-color: white;
-        }
-        .con{
-          height: 100px;
-          align-items: center;
-          justify-content: center;
-        }
-        .menu-bar{
-          height: 110px;
-        }
-        .menu-1 > ul> li > div{
-          position: absolute;
-          left: 0;
-          width: 100%;
-          display: none;
-        }
-        .menu-1 > ul > li:hover div{
-          display: block;
-        }
-        nav {
-          width:750px;
-          margin: 0 100px 0 30px;
-        }
-        nav > ul > li {
-          float:left;
-          line-height:50px;
-          padding:0;
-        }
-        nav > ul > li ul{
-          width:100%; 
-          position: absolute; 
-          display:none;
-        }
-        nav > ul > li ul a{
-          white-space:nowrap;
-        }
-        nav > ul > li:hover ul{
-          display: block;
-        } 
-        nav > ul > li:hover > a{
-          border-bottom: 1px solid black;
-          transition: all 0.5s ease-in-out;
-        }
-        .submenu{
-          border-top: 1px solid rgb(241, 241, 241);
-          padding-left: 4%;
-          width: 100%;
-          padding-right: 30%;
-          overflow: hidden;
-          color: #666;
-          background-color: white;
-        }
-        .submenu>a{
-          width: 18%;
-          font-size: 0.8rem;
-          display: inline-block;
-        }
-        #main_location{
-          padding: 20px 0 0 0;
-          position: absolute;
-          top: 120px;
-        }
-        #header_logo{
-          width: 220px;
-          height: auto;
-        }
-        .mainmenu > li{
-          padding: 10px;
-        }
-        .imformation_icon{
-          width: 18px;    
-          height: 18px;
-          margin-right: 20px;
-        }
-        .line_array{
-          list-style: none;
-          display: inline-block;
-        }
-        .ani_color:hover{
-          /* 2번 메뉴바 컬러 */
-          color: #41C2D5;
-          transition: 0.8s;
-          transition-timing-function: ease-out;
-        }
-        #main_location{ 
-          width: 100%;
-          z-index: -11;
-        }
-        #middle_comment_view{
-          padding-top: 30px;
-        }
-        #middle_comment{
-          display: block;
-          font-size: 2rem;
-        }
-
-        .middle_view_in{
-          margin-top: 10px;
-          background-color: #41C2D5;
-          padding: 7px 23px;
-        }
-        #middle_view{
-          margin-bottom: 2.5%;
-        }
-        #middle_big_image{
-          margin: 5% 0 0 0;
-          width: 100%;
-          display: flex;
-        }
-        #gif_image{
-          width: 50%;
-        }
-        #gif_image_right{
-          width:50%;
-          background-color: #eee;
-        }
-        #gif_image_inner{
-          position: relative;
-          text-align: center;
-          align-items: center;
-          justify-content: center;
-          display: inline-block;
-        }
-        #gif_rigth_subject{
-          display: block;
-          margin-bottom: 20px;
-          font-size: 2rem;
-        }
-        #gif_right_side_imformation{
-          display: block;
-        }
-        #gif_button{
-          position: absolute;
-          display: block;
-          width: 120px;
-          left: -60px;
-          margin: 2% 0 0 50%;
-        }
-
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-        // ==========================================(top_menu_bar 만드는 js)
-        // var header = document.querySelector('#second_menu'),
-        // mainMenuList = document.querySelectorAll('.address > li'),
-        // subMenu = document.querySelectorAll('.submenu'),
-        // headerHeight = header.offsetHeight,
-        // subMenuHeight = 0;
-
-        // for(var i = 0; i < mainMenuList.length; i++){
-        //     mainMenuList[i].addEventListener('mouseover', function(){
-        //         subMenuHeight = this.querySelector('.submenu').offsetHeight;
-        //         header.style.height = headerHeight + subMenuHeight + 'px';
-        //     });
-        //     mainMenuList[i].addEventListener('mouseout', function(){
-        //         header.style.height = headerHeight + 'px';
-        //     });
-        // }
-        // ==========================================
-        // $(function(){
-        //     var $firstMenu = $('nav > ul > li'),
-        //     $header = $('#second_menu');
-        // })
-        // $firstMenu.mouseenter(function(){
-        //     $header.stop().animate({height: '250px'},300)
-        // })
-        // .mouseleave(function(){
-        //     $header.stop().animate({height: '50px' },300);
-        // })
-        // =========================================
->>>>>>> 4c8fc9a09fa36cca3ab802a25d90ee432796b6ea
         jQuery(document).ready(function(){
           $(".mainmenu > li").mouseover(function(){
             $(this).find(".submenu").stop().slideDown(500);
@@ -772,13 +438,10 @@
           $("html, body").animate({ scrollTop: 0 }, 400);
           return false;
         });
-<<<<<<< HEAD
         function onClick(){
           document.querySelector('#emailError').style.display = 'block';
         }
         document.getElementById('signBtn').addEventListener('click', onClick);
-=======
->>>>>>> 4c8fc9a09fa36cca3ab802a25d90ee432796b6ea
     </script>
 </head>
 <body>
@@ -982,18 +645,7 @@
               src="https://www.jellycat.com/images/video/FAST_FOOD_VIDEO_MAIN.MP4"
             />
           </video>
-<<<<<<< HEAD
         </div> 
-=======
-        </div>
-
-
-
-
-
-
-        
->>>>>>> 4c8fc9a09fa36cca3ab802a25d90ee432796b6ea
         <div id="middle_top_area" class="box">
           <div id="middle_comment_view">
             <span id="middle_comment">
@@ -1049,10 +701,7 @@
               class="dolls_a"
               href="https://www.jellycat.com/eu/amuseable-peanut-a6pe/"
             >
-<<<<<<< HEAD
 
-=======
->>>>>>> 4c8fc9a09fa36cca3ab802a25d90ee432796b6ea
               <img
                 src="https://www.jellycat.com/images/products/medium/A6PE.jpg"
               />
@@ -1099,7 +748,6 @@
               class="big_dolls_a_page"
               href="https://www.jellycat.com/eu/best-sellers/"
             >
-<<<<<<< HEAD
               <div class="big_dolls_a_page_box">
                 <img class="big_dolls_img"
                   src="https://www.jellycat.com/images/articles/RAINBOW_PORTRAIT.jpg"
@@ -1108,14 +756,6 @@
                   <div class="big_dolls_name">Most Loved</div>
                   <div class="big_dolls_btn">SHOP NOW</div>
                 </div>
-=======
-              <img class="big_dolls_img"
-                src="https://www.jellycat.com/images/articles/RAINBOW_PORTRAIT.jpg"
-              />
-              <div class="big_dolls_name_btn">
-                <div class="big_dolls_name">Most Loved</div>
-                <div class="big_dolls_btn">SHOP NOW</div>
->>>>>>> 4c8fc9a09fa36cca3ab802a25d90ee432796b6ea
               </div>
             </a>
           </span>
@@ -1124,7 +764,6 @@
             <a
               class="big_dolls_a_page"
               href="https://www.jellycat.com/eu/big-toy-gifts/">
-<<<<<<< HEAD
               <div class="big_dolls_a_page_box">
                 <img class="big_dolls_img"
                   src="https://www.jellycat.com/images/articles/BACKPACK_PORTRAIT.jpg"
@@ -1133,14 +772,6 @@
                   <div class="big_dolls_name">Big Toys</div>
                   <div class="big_dolls_btn">SHOP NOW</div>
                 </div>
-=======
-              <img class="big_dolls_img"
-                src="https://www.jellycat.com/images/articles/BACKPACK_PORTRAIT.jpg"
-              />
-              <div class="big_dolls_name_btn">
-                <div class="big_dolls_name">Big Toys</div>
-                <div class="big_dolls_btn">SHOP NOW</div>
->>>>>>> 4c8fc9a09fa36cca3ab802a25d90ee432796b6ea
               </div>
             </a>
           </span>
@@ -1149,7 +780,6 @@
             <a
               class="big_dolls_a_page"
               href="https://www.jellycat.com/eu/bashfuls/">
-<<<<<<< HEAD
               <div class="big_dolls_a_page_box">
                 <img class="big_dolls_img"
                   src="https://www.jellycat.com/images/articles/SUN_EGG_PORTRAIT.jpg"
@@ -1158,14 +788,6 @@
                   <div class="big_dolls_name">Bashfuls</div>
                   <div class="big_dolls_btn">SHOP NOW</div>
                 </div>
-=======
-              <img class="big_dolls_img"
-                src="https://www.jellycat.com/images/articles/SUN_EGG_PORTRAIT.jpg"
-              />
-              <div class="big_dolls_name_btn">
-                <div class="big_dolls_name">Bashfuls</div>
-                <div class="big_dolls_btn">SHOP NOW</div>
->>>>>>> 4c8fc9a09fa36cca3ab802a25d90ee432796b6ea
               </div>
             </a>
           </span>
@@ -1174,7 +796,6 @@
         <div>Bashful Favourites</div>
         <div>토끼 인형</div>
         <div>Recently Viewed,토끼인형하나</div>
-<<<<<<< HEAD
         <div class="newsletter">
           <div id="news_1">Jellycat Newsletter</div>
           <div id="news_2">Don’t miss our latest updates</div>
@@ -1227,9 +848,6 @@
             </ul>
         </div>
         <div><a id="paraspar" href="https://www.paraspar.co.uk/">eCommerce by Paraspar</a></div>
-=======
-        <div>Jellycat Newsletter, 검색창</div>
->>>>>>> 4c8fc9a09fa36cca3ab802a25d90ee432796b6ea
       </main>
     
 </body>
