@@ -1,87 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>젤리캣 메인화면</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link href="//db.onlinewebfonts.com/c/02408ccd8efcf169db4e41d6e0551118?family=NeueKabelW01-Regular" rel="stylesheet" type="text/css"/>
+    <title>Document</title>
     <style>
-      /* all */
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
+      
+        * {
+          font-family: NeueKabelW01-Regular, sans-serif;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+        :root{
+            --primary-color:#41C2D5;
+            --primary-font:'Josefin Sans', sans-serif;
+        }
 
-      .box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        .box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        /* header */
+        .main_grid {
+            height: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background-color: #41c2d5;
+        }
+        .main_a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration-line: none;
+            color: #22272a;
+        }
+        /* animation */
+        .animation {
+          width: 100%;
+        }
+        /* 피자, 햄버거.. 인형들 */
+        .doll_main {
+            padding: 8px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .dolls img {
+            width: 100%;
+            height: 100%;
+        }
+        .dolls_a {
+            text-decoration-line: none;
+        }
+        .dolls_name {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #22272a;
+            margin-bottom: 30px;
+        }
+        button {
+            position: absolute;
+            display: none;
+            border-radius: 4px;
+            border: 0;
+            margin: 0 8px;
+            padding: 16px;
+            background: #41c2d5;
+            text-align: center;
+            font-weight: 600;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+        .dolls:hover {
+            border: #ececec 0.5px solid;
+        }
+        .dolls:hover button {
+            display: block;
+            animation-name: move;
+            animation-duration: 0.5s;
+            transform: translateY(-35px);
+        }
+        @keyframes move {
+            0% {
+            transform: translateY(0px);
+            }
+            100% {
+            transform: translateY(-35px);
+            }
+        }
+        .buyme_button:hover {
+            background-color: #72cddb;
+        }
+        .slick-arrow:hover {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.7);
+            top: calc(50% - 20px);
+            z-index: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+        }
+        /* 3개짜리 이미지 화면 */
+        .big_dolls {
+          display: flex;
+          margin-top: 2%;
+        }
+        .big_dolls_page {
+          display: inline-block;
+          width: 100%;
+          max-width: 33.99%;
+          margin:7px;
+        }
+        .big_dolls_a_page_box{
+          text-decoration: none;
+          position: relative;
+        }
+        .big_dolls_page img {
+          width: 100%;
+          height: 100%;
+        }
+        .big_dolls_name_btn {
+          position: absolute;
+          transform: translate(-50%, -480%);
+          bottom: -200px;
+          left: 120px;
+          color: black;
+        }
+        .big_dolls_name {
+          font-size: 36px;
+          margin: 0px 20px 0px 0px;
+        }
+        .big_dolls_btn {
+          font-size: 15px;
+          border: #41c2d5 1px solid;
+          background-color: #41c2d5;
+          padding: 8px 0px;
+          margin: 10px 0px;
+          width: 100px;
+          text-align: center;
+        }
+        .big_dolls_btn:hover, .middle_view_in:hover{
+          background-color: white;
+          border: #41c2d5 1px solid;
+        }
+        /* 상단 이동 버튼 */
+        .btn_gotop {
+          display: block;
+          position: fixed;
+          bottom: 35px;
+          right: 30px;
+          z-index: 999;
+          outline: none;
+          cursor: pointer;
+          padding: 30px 0px;
+          border-radius: 100%;
+          border: 0;
+        }
+        .btn_gotop img {
+          width: 50px;
+          height: 50px;
+        }
+        /* ============================================= */
+        header{
+          width: 100%;
+          position: fixed;
+          top: 0;
+        }
+        #second_menu{
+          padding: 0 0 0 0;
+          background-color: white;
+        }
+        .con{
+          height: 100px;
+          align-items: center;
+          justify-content: center;
+        }
+        .menu-bar{
+          height: 110px;
+        }
+        .menu-1 > ul> li > div{
+          position: absolute;
+          left: 0;
+          width: 100%;
+          display: none;
+        }
+        .menu-1 > ul > li:hover div{
+          display: block;
+        }
+        nav {
+          width:750px;
+          margin: 0 100px 0 30px;
+        }
+        nav > ul > li {
+          float:left;
+          line-height:50px;
+          padding:0;
+        }
+        nav > ul > li ul{
+          width:100%; 
+          position: absolute; 
+          display:none;
+        }
+        nav > ul > li ul a{
+          white-space:nowrap;
+        }
+        nav > ul > li:hover ul{
+          display: block;
+        } 
+        nav > ul > li:hover > a{
+          border-bottom: 1px solid black;
+          transition: all 0.5s ease-in-out;
+        }
+        .submenu{
+          border-top: 1px solid rgb(241, 241, 241);
+          padding-left: 4%;
+          width: 100%;
+          padding-right: 30%;
+          overflow: hidden;
+          color: #666;
+          background-color: white;
+        }
+        .submenu>a{
+          width: 18%;
+          font-size: 0.8rem;
+          display: inline-block;
+        }
+        #main_location{
+          padding: 20px 0 0 0;
+          position: absolute;
+          top: 120px;
+        }
+        #header_logo{
+          width: 220px;
+          height: auto;
+        }
+        .mainmenu > li{
+          padding: 10px;
+        }
+        .imformation_icon{
+          width: 18px;    
+          height: 18px;
+          margin-right: 20px;
+        }
+        .line_array{
+          list-style: none;
+          display: inline-block;
+        }
+        .ani_color:hover{
+          /* 2번 메뉴바 컬러 */
+          color: #41C2D5;
+          transition: 0.8s;
+          transition-timing-function: ease-out;
+        }
+        #main_location{ 
+          width: 100%;
+          z-index: -11;
+        }
+        #middle_comment_view{
+          padding-top: 30px;
+        }
+        #middle_comment{
+          display: block;
+          font-size: 2rem;
+        }
 
-      /* header */
+        .middle_view_in{
+          margin-top: 10px;
+          background-color: #41C2D5;
+          padding: 7px 23px;
+        }
+        #middle_view{
+          margin-bottom: 2.5%;
+        }
+        #middle_big_image{
+          margin: 7% 0 0 0;
+          width: 100%;
+          display: flex;
+        }
+        #gif_image{
+          width: 50%;
+        }
+        #gif_image_right{
+          width:50%;
+          background-color: #eee;
+        }
+        #gif_image_inner{
+          position: relative;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          display: inline-block;
+        }
+        #gif_rigth_subject{
+          display: block;
+          margin-bottom: 20px;
+          font-size: 2rem;
+        }
+        #gif_right_side_imformation{
+          display: block;
+        }
+        #gif_button{
+          position: absolute;
+          display: block;
+          width: 120px;
+          left: -60px;
+          margin: 2% 0 0 50%;
+        }
 
-      .main_grid {
-        height: 40px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        background-color: #41c2d5;
-      }
 
-      .main_a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration-line: none;
-        color: #22272a;
-      }
+        /*Jellycat Newsletter*/
+        
+        .newsletter{
+            height: 280px;
+            font-family: var(--primary-font);
+            border-top: solid 6px var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
 
-      /* animation */
+        #news_1{
+            margin-top: 10px;
+            margin-bottom: -20px;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+        
+        #news_2{
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: -20px;
+        }
 
-      .animation {
-        width: 100%;
-      }
+        #news_3{
+            font-size: 15px;
+            text-align: center;
+            line-height: 25px;
+            margin-bottom: -15px;
+        }
+
+        .newsletter .sign{
+            margin-bottom: 10px;
+        }
+
+        .newsletter .sign input{
+            width: 350px;
+            height: 40px;
+            border: solid 1px #ddd;
+        }      
+        #signBtn{
+            width: 150px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            border: none;
+            font-family: var(--primary-font);
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #emailError{
+            display: none;
+            color: #c92929;
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: -0.5px;
+            padding-top: 10px;
+        }
+        /*footer*/
+        footer{
+            height: 296px;
+            background-color: var(--primary-color);
+            font-size: 16px;
+            font-family: var(--primary-font);        
+            position: relative;
+        }
+
+        .footer_grid{
+            position: absolute;
+            top: 10%;
+            left: 13%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .footer_title{
+            display: inline-block;
+            font-weight: bold;     
+            margin-bottom: 10px;       
+        }
+
+        .footer_list{
+            list-style: none;
+            font-weight: 400;
+            padding-left: 0;    
+            line-height: 32px;
+            margin-right: 50px;
+        }
+
+        #paraspar{
+            position: absolute;
+            font-weight: 400;
+            color: #999999;
+            display: block;
+            text-align: right;
+            top: 90%;
+            left: 75%;
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <div class="main_grid">
-        <a class="main_a" href="https://jellycathelp.zendesk.com/hc/en-gb"
-          >Need Help?</a
-        >
-        <a
-          class="main_a"
-          href="https://jellycathelp.zendesk.com/hc/en-gb/articles/6197990920209-What-are-your-gift-options-"
-          >Free Gift Message</a
-        >
-        <a
-          class="main_a"
-          href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery"
-          >Delivery Information</a
-        >
-      </div>
-      <div>
-        호령 제작 공간
-      </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+        jQuery(document).ready(function(){
+          $(".mainmenu > li").mouseover(function(){
+            $(this).find(".submenu").stop().slideDown(500);
+          }).mouseout(function(){
+            $(this).find(".submenu").stop().slideUp(500);
+          });
+        });
+        // ==========================================
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 300) {
+            $(".btn_gotop").show();
+          } else {
+            $(".btn_gotop").hide();
+          }
+        });
+        $(".btn_gotop").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 400);
+          return false;
+        });
+        function onClick(){
+          document.querySelector('#emailError').style.display = 'block';
+        }
+        document.getElementById('signBtn').addEventListener('click', onClick);
+    </script>
+</head>
+<body>
+    <header class="menu-bar con-min-width">
+        <div class="main_grid">
+            <a class="main_a" href="https://jellycathelp.zendesk.com/hc/en-gb"
+              >Need Help?</a
+            >
+            <a
+              class="main_a"
+              href="https://jellycathelp.zendesk.com/hc/en-gb/articles/6197990920209-What-are-your-gift-options-"
+              >Free Gift Message</a
+            >
+            <a
+              class="main_a"
+              href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery"
+              >Delivery Information</a
+            >
+        </div>
+        <div id="second_menu" class="con flex h-full">
+          <div id="header_logo">
+            <img src="https://www.jellycat.com/images/core/new-logo-2022-v2-1.png" alt="jellycat_brand_logo">
+          </div>
+          <nav class="menu-1 flex h-full">
+              <ul class="flex mainmenu">
+                  <li>
+                      <a href="#" class="flex h-full items-center ani_color">ANIMALS</a>
+                      <div class="con-min-width address">
+                          <div class="con">
+                              <ul class="submenu">
+                                  <a href="https://www.jellycat.com/eu/all-animals/">ALL ANIMALS</a>
+                                  <a href="https://www.jellycat.com/eu/amphibians-reptiles/">Amphibians & Reptiles</a>
+                                  <a href="https://www.jellycat.com/eu/arctic-antarctic/">Arctic & Antarctic</a>
+                                  <a href="https://www.jellycat.com/eu/bears/">Bears</a>
+                                  <a href="www.naver.com">Birds</a>    
+                                  <a href="www.naver.com">Bugs & Insects</a>
+                                  <a href="www.naver.com">Bunnies</a>
+                                  <a href="www.naver.com">Cats & Kittens</a>
+                                  <a href="www.naver.com">Dogs & Puppies</a>
+                                  <a href="www.naver.com">Dragons & Dinosaurs</a>
+                                  <a href="www.naver.com">Farmyard</a>    
+                                  <a href="www.naver.com">Jungle & Safari</a>
+                                  <a href="www.naver.com">Mythical Creatures</a>
+                                  <a href="www.naver.com">Ocean</a>
+                                  <a href="www.naver.com">Pets</a>
+                                  <a href="www.naver.com">Woodland Animals</a>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <a href="#" class="flex h-full items-center ani_color">AMUSEABLES</a>
+                      <div class="con-min-width">
+                          <div class="con">
+                              <ul class="submenu">
+                                  <a href="" class="amuseables">ALL AMUSEABLES</a>
+                                  <a href="" class="amuseables">Amuseable Objects</a>
+                                  <a href="" class="amuseables">Food & Drink</a>
+                                  <a href="" class="amuseables">Plants & Flowers</a>
+                                  <a href="" class="amuseables">Woodland</a>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <a href="#" class="flex h-full items-center ani_color">PERSONALISED</a>
+                      <div class="con-min-width">
+                          <div class="con">
+                              <ul class="submenu">
+                                  <a href="" class="personalised">ALL PERSONALISED</a>
+                                  <a href="" class="personalised">Personalised Bunnies</a>
+                                  <a href="" class="personalised">Personalised Jumpers</a>
+                                  <a href="" class="personalised">Personalised Soothers</a>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <a href="#" class="flex h-full items-center ani_color">COLLECTIONS</a>
+                      <div class="con-min-width">
+                          <div class="conx">
+                              <ul class="submenu">
+                                  <a href="" class="collections">ALL SOFT TOYS</a>
+                                  <a href="" class="collections">New In</a>
+                                  <a href="" class="collections">Amuseable Objects</a>
+                                  <a href="" class="collections">Bashfuls</a>
+                                  <a href="" class="collections">Bashful Bunnies </a>
+                                  <a href="" class="collections">Beautifully Scrumptious</a>
+                                  <a href="" class="collections">Big Toys</a>
+                                  <a href="" class="collections">Blossom Bunnies</a>
+                                  <a href="" class="collections">Colorful & Quirky</a>
+                                  <a href="" class="collections">Cordy Roys</a>
+                                  <a href="" class="collections">Dressed To Impress</a>
+                                  <a href="" class="collections">Food & Drink</a>
+                                  <a href="" class="collections">Fuddlewuddle</a>
+                                  <a href="" class="collections">Little Legs</a>
+                                  <a href="" class="collections">Long Legs</a>
+                                  <a href="" class="collections">Mad Menagerie</a>
+                                  <a href="" class="collections">Plants & Flowers</a>
+                                  <a href="" class="collections">Pocket Pals </a>
+                                  <a href="" class="collections">Sea Life</a>
+                                  <a href="" class="collections">Spring Delights</a>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <a href="#" class="flex h-full items-center ani_color">GIFT&nbsp;IDEAS</a>
+                      <div class="con-min-width">
+                          <div class="con">
+                              <ul class="submenu">
+                                  <a href="" class="gigt_ideas">Most Loved</a>
+                                  <a href="" class="gigt_ideas">Mother's Day Gifts</a>
+                                  <a href="" class="gigt_ideas">Easter Gifts</a>
+                                  <a href="" class="gigt_ideas">Never Too Old Gifts</a>
+                                  <a href="" class="gigt_ideas">Personalised Gifts</a>
+                                  <a href="" class="gigt_ideas">Big Toy Gifts</a>
+                                  <a href="" class="gigt_ideas">Book & Toy Gifts</a>
+                                  <a href="" class="gigt_ideas">Baby Gifts</a>
+                                  <a href="" class="gigt_ideas">Anniversary Gifts</a>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <a href="#" class="flex h-full items-center ani_color">BAGS</a>
+                      <div class="con-min-width">
+                          <div class="con">
+                              <ul class="submenu">
+                                  <a href="" class="bags">ALL ACCESSORIES</a>
+                                  <a href="" class="bags">Bags & Purses</a>
+                                  <a href="" class="bags">Bag Charms</a>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <a href="#" class="flex h-full items-center ani_color">BOOKS</a>
+                      <div class="con-min-width">
+                          <div class="con">
+                              <ul class="submenu">
+                                  <a href="" class="books">ALL BOOKS</a>
+                                  <a href="" class="books">If I Were Books</a>
+                                  <a href="" class="books">Soft Books</a>
+                                  <a href="" class="books">Story Books</a>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <a href="#" class="flex h-full items-center ani_color">BABY</a>
+                      <div class="con-min-width">
+                          <div class="con">
+                              <ul class="submenu">
+                                  <a href="" class="baby">ALL BABY GIFTS</a>
+                                  <a href="" class="baby">Nursery Gifts</a>
+                                  <a href="" class="baby">Activity Toys</a>
+                                  <a href="" class="baby">Buggy Toys</a>
+                                  <a href="" class="baby">Comforters & Soothers</a>
+                                  <a href="" class="baby">Boing Balls</a>
+                                  <a href="" class="baby">Gift Sets</a>
+                                  <a href="" class="baby">Musical Pulls</a>
+                                  <a href="" class="baby">Rattles & Ring Toys</a>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+          </nav>
+          <div id="header_imformation_icon">
+            <ul>
+                <a href="">
+                    <li class="line_array">
+                        <img class="imformation_icon" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fchnwhq%2Fbtr1PN5ALwC%2FKvdMyAA9kIGVsyrtrKDIk1%2Fimg.png" alt="search_icon">
+                    </li>
+                </a>
+                <a href="https://www.jellycat.com/eu/login/?target=myaccount%5Fpage">
+                    <li class="line_array">
+                        <img class="imformation_icon" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmLavD%2Fbtr1JtNB2bf%2F4fR6d0keTCQ8HW1OYoHCz1%2Fimg.png" alt="person_icon">
+                    </li>
+                </a>
+                <a href="https://www.jellycat.com/eu/wishlist/">
+                    <li class="line_array">
+                        <img class="imformation_icon" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FxvNDR%2Fbtr1Jr96NRh%2FtbDePYGOxU5mcb1mzavbzk%2Fimg.png" alt="heart_icon">
+                    </li>
+                </a>
+                <a href="https://www.jellycat.com/eu/basket/">
+                    <li class="line_array">
+                        <img class="imformation_icon" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcXQNgv%2Fbtr1EdxKVNd%2FQzMl8aFwMO3PkCsKRDyOX0%2Fimg.png" alt="bag_icon">
+                    </li>
+                </a>
+            </ul>
+        </div>
+        </div>
     </header>
-    <main>
-      <div>
-        <video class="animation" autoplay muted>
-          <source
-            type="video/mp4"
-            src="https://www.jellycat.com/images/video/FAST_FOOD_VIDEO_MAIN.MP4"
-          />
-        </video>
+    <main id="main_location">
+        <div>
+          <video class="animation" autoplay muted>
+            <source
+              type="video/mp4"
+              src="https://www.jellycat.com/images/video/FAST_FOOD_VIDEO_MAIN.MP4"
+            />
+          </video>
+        </div> 
+        <div id="middle_top_area" class="box">
+          <div id="middle_comment_view">
+            <span id="middle_comment">
+              View our Jellycat Amuseables collection 
+            </span>
+          </div>
+        </div>
+        <div id="middle_view" class="box">
+          <a href="https://www.jellycat.com/eu/amuseables/">
+            <div id="middle_view_in" class="box middle_view_in">
+              <span>
+                DISCOVER NOW
+              </span>
+            </div>
+          </a>
+        </div>  
+        <span class="doll_main">
+          <span class="dolls">
+            <a
+              class="dolls_a"
+              href="https://www.jellycat.com/eu/amuseable-slice-of-pizza-a2sop/"
+            >
+              <img
+                src="https://www.jellycat.com/images/products/medium/A2SOP.jpg"
+              />
+              <div class="dolls_name">
+                Amsuseable Slice Pizza
+                <button class="buyme_button">BUY ME</button>
+              </div>
+            </a>
+  
+            <div class="dolls_name">€35.00</div>
+          </span>
+  
+          <span class="dolls">
+            <a
+              class="dolls_a"
+              href="https://www.jellycat.com/eu/amuseable-burger-a2bu/"
+            >
+              <img
+                src="https://www.jellycat.com/images/products/medium/A2BU.jpg"
+              />
+              <div class="dolls_name">
+                Amsuseable Burger
+                <button class="buyme_button">BUY ME</button>
+              </div>
+            </a>
+            <div class="dolls_name">€38.00</div>
+          </span>
+  
+          <span class="dolls">
+            <a
+              class="dolls_a"
+              href="https://www.jellycat.com/eu/amuseable-peanut-a6pe/"
+            >
+
+              <img
+                src="https://www.jellycat.com/images/products/medium/A6PE.jpg"
+              />
+              <div class="dolls_name">
+                Amsuseable Peanut
+                <button class="buyme_button">BUY ME</button>
+              </div>
+            </a>
+            <div class="dolls_name">€19.00</div>
+          </span>
+  
+          <span class="dolls">
+            <a
+              class="dolls_a"
+              href="https://www.jellycat.com/eu/amuseable-pain-au-raisin-a6parai/"
+            >
+              <img
+                src="https://www.jellycat.com/images/products/medium/A6PARAI.jpg"
+              />
+              <div class="dolls_name">
+                Amsuseable Pain Au Raisin
+                <button class="buyme_button">BUY ME</button>
+              </div>
+            </a>
+            <div class="dolls_name">€23.00</div>
+          </span>
+        </span>
+  
+        <div id="middle_big_image">
+          <img id="gif_image" src="https://www.jellycat.com/images/articles/NAVY_JUMPER_SPLIT.gif" alt="rabbit">
+          <div id="gif_image_right" class="box">
+              <div id="gif_image_inner">
+                <div id="gif_rigth_subject">Personalised Jumper</div>
+                <div id="gif_right_side_imformation">Beautifully embroidered jumpers on our diverse range of Bashfuls for that extra special touch to the perfect gift for a newborn, friend or loved one.</div>
+                <div id="gif_button" class="middle_view_in">shop now
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="big_dolls">
+          <span class="big_dolls_page">
+            <a
+              class="big_dolls_a_page"
+              href="https://www.jellycat.com/eu/best-sellers/"
+            >
+              <div class="big_dolls_a_page_box">
+                <img class="big_dolls_img"
+                  src="https://www.jellycat.com/images/articles/RAINBOW_PORTRAIT.jpg"
+                />
+                <div class="big_dolls_name_btn">
+                  <div class="big_dolls_name">Most Loved</div>
+                  <div class="big_dolls_btn">SHOP NOW</div>
+                </div>
+              </div>
+            </a>
+          </span>
+  
+          <span class="big_dolls_page">
+            <a
+              class="big_dolls_a_page"
+              href="https://www.jellycat.com/eu/big-toy-gifts/">
+              <div class="big_dolls_a_page_box">
+                <img class="big_dolls_img"
+                  src="https://www.jellycat.com/images/articles/BACKPACK_PORTRAIT.jpg"
+                />
+                <div class="big_dolls_name_btn">
+                  <div class="big_dolls_name">Big Toys</div>
+                  <div class="big_dolls_btn">SHOP NOW</div>
+                </div>
+              </div>
+            </a>
+          </span>
+  
+          <span class="big_dolls_page">
+            <a
+              class="big_dolls_a_page"
+              href="https://www.jellycat.com/eu/bashfuls/">
+              <div class="big_dolls_a_page_box">
+                <img class="big_dolls_img"
+                  src="https://www.jellycat.com/images/articles/SUN_EGG_PORTRAIT.jpg"
+                />
+                <div class="big_dolls_name_btn">
+                  <div class="big_dolls_name">Bashfuls</div>
+                  <div class="big_dolls_btn">SHOP NOW</div>
+                </div>
+              </div>
+            </a>
+          </span>
+        </div>
+  
+        <div>Bashful Favourites</div>
+        <div>토끼 인형</div>
+        <div>Recently Viewed,토끼인형하나</div>
+        <div class="newsletter">
+          <div id="news_1">Jellycat Newsletter</div>
+          <div id="news_2">Don’t miss our latest updates</div>
+          <div id="news_3">By choosing to sign up, you will join our mailing list.<br>
+              You can opt out at any time.</div>
+          <div class="sign">
+              <input/>
+              <button id="signBtn"><a href="#" onclick="return stop();">Sign me up</a></button>
+              <div id="emailError">The email address should be between 6 and 50 characters. Please correct to continue.</div>
+          </div>
       </div>
-      <div>View our Jellycat Amuseables collection 랑 클릭버튼</div>
-      <div>피자, 햄버거사진들</div>
-      <div>기린</div>
-      <div>꽃게? 주호민 most loved</div>
-      <div>Bashful Favourites</div>
-      <div>토끼 인형</div>
-      <div>Recently Viewed,토끼인형하나</div>
-      <div>Jellycat Newsletter, 검색창</div>
-    </main>
-    <footer>맨아래(영어 개많음!)</footer>
-  </body>
+      <footer>
+        <div class="footer_grid">
+            <div>
+                <a class="footer_title" href="https://www.jellycat.com/eu/about/">Here to help</a>
+                <ul class="footer_list">
+                    <li><a href="https://www.jellycat.com/eu/dispatch-delivery/">Delivery</a></li>
+                    <li><a href="https://www.jellycat.com/eu/returns-and-cancellations/">Returns</a></li>
+                    <li><a href="https://www.jellycat.com/eu/frequently-asked-questions/">FAQs</a></li>
+                    <li><a href="https://www.jellycat.com/eu/international-customers/">International Customers</a></li>
+                    <li><a href="https://www.jellycat.com/eu/how-to-pay/">Safe & Secure Payment</a></li>
+                    <li><a href="https://www.jellycat.com/eu/shopping-terms-conditions/">Online Shopping Ts & Cs</a></li>
+                    <li><a href="https://www.jellycat.com/eu/privacy-cookies/">Security & Privacy</a></li>
+                </ul>
+            </div>
+            <div>
+                <a class="footer_title" href="https://www.jellycat.com/eu/about/">About Us</a>
+                <ul class="footer_list">
+                    <li><a href="https://www.jellycat.com/eu/about/">About Us</a></li>
+                    <li><a href="https://www.jellycat.com/eu/safety-and-suitability/">Safety & Suitability</a></li>
+                    <li><a href="https://www.jellycat.com/eu/terms-conditions/">General T's & C's</a></li>
+                    <li><a href="https://www.jellycat.com/eu/modern-slavery-statement/">Modern Slavery Statement</a></li>
+                    <li><a href="https://www.jellycat.com/eu/site-map/">Sitemap</a></li>
+                </ul>
+            </div>
+            <div>
+                <a class="footer_title" href="https://www.jellycat.com/eu/trade/">Trade</a>
+                <ul class="footer_list">
+                    <li><a href="https://www.jellycat.com/eu/trade-existing-customers/">Existing Retailers</a></li>
+                    <li><a href="https://www.jellycat.com/eu/trade-new-customer/">Become a Retailer</a></li>
+                    <li><a href="https://www.jellycat.com/eu/trade-exhibitions/">Trade Exhibitions</a></li>
+                    <li><a href="https://www.jellycat.com/eu/wholesale-terms-and-conditions/">Wholesale Ts & Cs</a></li>
+                    <li><a href="https://www.jellycat.com/eu/press-and-pr/">Press & PR</a></li>
+                </ul>
+            </div>
+            <ul class="footer_list">
+                <li><a href="https://www.jellycat.com/eu/retired-designs/">Retired Jellycat</a></li>
+                <li><a href="https://careers.jellycat.com/">Jelly Jobs</a></li>
+                <li><a href="https://www.jellycat.com/eu/storelocator/">Store Locator</a></li>
+            </ul>
+        </div>
+        <div><a id="paraspar" href="https://www.paraspar.co.uk/">eCommerce by Paraspar</a></div>
+      </main>
+    
+</body>
 </html>
