@@ -50,7 +50,7 @@
 
         /*Reviews*/
         .reviews{
-            height: 1250px;
+            height: 1000px;
             font-family: var(--primary-font);
             display: flex;
             flex-direction: column;
@@ -268,10 +268,15 @@
         .contents_top{
             display: flex;
             justify-content: space-between;
+            margin-bottom: 30px;
         }
 
         .contents_topLeft{
             font-size: 20px;
+        }
+
+        .reviewStars{
+            color:#41C2D5;
         }
 
         .contents_topRight{
@@ -279,7 +284,12 @@
             font-weight: bolder;
             font-style: italic;
         }
-        .original button {
+
+        .contents_bottom{
+            line-height: 25px;
+        }
+
+        #addBtn {
             width: 500px;
             height: 40px;
             border: none;
@@ -287,12 +297,16 @@
             background-color: #FDA139;
             font-family: var(--primary-font);
             font-size: 15px;
-            margin-left: 30%;
+            margin-left:30%;
         }
 
-        .original button:hover{
+        #addBtn:hover{
             background-color: #ff8700;
             transition: all 0.5s;
+        }
+
+        .additional{
+            display: none;
         }
 
         .original button a{
@@ -308,21 +322,70 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 1%;
         }
 
         .friends_title{
             margin-bottom: 2%;
+            display: flex;
+        }
+        
+        .friends_title input{
+            opacity: 0;
+            z-index: 2;
+            position: absolute;
         }
 
-        .friends_title a{
+        #meetFriends{
+            width: 432px;
+            height: 64px;
+        }
+
+        #recentlyViewed{
+            width: 301px;
+            height: 64px;
+        }
+
+        .friends_title label{
+            z-index: 1;
+            display: inline-block;
             font-family: var(--primary-font);
-            border: none;
-            background-color: #fff;
-            height: 50px;
-            font-size: 30px;
+            height: 40px;
+            font-size: 26px;
             font-weight: 400;
+            margin: 20px 60px 0 50px;
+            color: #d3d3d3;
+            border: none;
         }
 
+        #layer_1{
+            z-index: 3;
+        }
+
+        #layer_2{
+            position: absolute;
+            margin-top: 100px;
+            z-index: 0;
+            width: 100vw;
+            height: 500px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #layer_2 li{
+            width: 380px;
+            height: 480px;
+        }
+
+        input:checked+.friendsBtn_title{
+            border-top: solid 2px var(--primary-color);
+        }
+
+        input:checked+.friendsBtn_title label{
+            color: #000;
+        }
+        
         .slide_wrapper{
             position: relative;
             width: 100vw;

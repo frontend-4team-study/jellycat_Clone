@@ -9,16 +9,16 @@ let rightBtn = document.querySelector('.right_arrow');
     function moveSlide(num){
         slides.style.left = -num * slideWidth + 'px';
         currentIdx = num;
-        // if(currentIdx == slideCount+3 || currentIdx == -slideCount){
-        //     setTimeout(function(){
-        //         slides.classList.remove('animated');
-        //         slides.style.left = '0px';
-        //         currentIdx = 0;
-        //     }, 100);
-        //     setTimeout(function(){
-        //         slides.classList.add('animated');
-        //     }, 200);
-        // }
+            // if(currentIdx == slideCount || currentIdx == -slideCount){
+            //     setTimeout(function(){
+            //         slides.classList.remove('animated');
+            //         slides.style.left = '0px';
+            //         currentIdx = 0;
+            //     }, 100);
+            //     setTimeout(function(){
+            //         slides.classList.add('animated');
+            //     }, 110);
+            // }
     }
 
     rightBtn.addEventListener('click', function(){
@@ -32,13 +32,13 @@ let rightBtn = document.querySelector('.right_arrow');
     makeClone();
 
     function makeClone(){
-            for(var i = 0; i < slideCount; i++){
-                var cloneSlide = slide[i].cloneNode(true);
+            for(let i = 0; i < slideCount; i++){
+                let cloneSlide = slide[i].cloneNode(true);
                 slides.append(cloneSlide);
             }
     
-            for(var i = slideCount-1; i>=0; i--){
-                var cloneSlide = slide[i].cloneNode(true);
+            for(let i = slideCount-1; i>=0; i--){
+                let cloneSlide = slide[i].cloneNode(true);
                 slides.prepend(cloneSlide);
             }
             updateWidth();
@@ -50,14 +50,14 @@ let rightBtn = document.querySelector('.right_arrow');
     }
 
     function updateWidth(){
-        var currentSlide = document.querySelectorAll('.slides li');
-        var newSlideCount = currentSlide.length;
+        let currentSlide = document.querySelectorAll('.slides li');
+        let newSlideCount = currentSlide.length;
 
-        var newWidth = (slideWidth) * newSlideCount + 'px';
+        let newWidth = (slideWidth) * newSlideCount + 'px';
         slides.style.width = newWidth;
     }
 
     function setInitialPosition(){
-        var initialTransValue = -(slideWidth) * slideCount;
+        let initialTransValue = -(slideWidth) * slideCount;
         slides.style.transform = `translateX(${initialTransValue}px)`;
     }
