@@ -2,7 +2,7 @@ let slides = document.querySelector('.slides');
 let slide = document.querySelectorAll('.slides li');
 let currentIdx = 0;
 let slideCount = slide.length;
-let slideWidth = 380; 
+let slideWidth = 380;
 let leftBtn = document.querySelector('.left_arrow');
 let rightBtn = document.querySelector('.right_arrow');
 
