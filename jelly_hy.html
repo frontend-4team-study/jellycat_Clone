@@ -43,21 +43,19 @@
         .animation {
           width: 100%;
         }
-        
-        
-  /* 피자, 햄버거.. 인형들 */
- 
-        *{
-            margin: 0;
-            padding: 0;
 
+        .jb-box { width: 100%; height: 500px; overflow: hidden;margin: 0px auto; position: relative; }
+
+        .playpause { display: inline; position: absolute; top: 85%; right: 4%; z-index: 1; }
+        .unmutePlayerButton{ display: inline; position: absolute; top: 85%; right: 12%; z-index: 1; }
+        .mutePlayerButton{ display: inline; position: absolute; top: 85%; right: 8%; z-index: 1; }
         
-        }
+      
 
         /*Meet My Little Legs Friends*/
 
         .friends{
-            height: 650px;
+            height: 430px;
             font-family: var(--primary-font);
             display: flex;
             flex-direction: column;
@@ -65,7 +63,7 @@
         }
 
         .friends_title{
-            margin-bottom: 2%;
+            margin-bottom: 1%;
         }
 
         .friends_title a{
@@ -79,7 +77,7 @@
 
         .slide_wrapper{
             position: relative;
-            width: 100vw;
+            width: 100%;
             height: 500px;
             overflow: hidden; 
         }
@@ -88,6 +86,7 @@
             position: absolute;
             top: 0;
             display: flex;
+            left: 0px;
         }
 
         .slides.animated{
@@ -103,9 +102,14 @@
             border: solid 1px #eee;
         }
 
+        .dolls {
+          justify-content: center;
+          text-align: center;
+        }
+
         .dolls a img{
-            width: 364px;
-            height: 364px;
+            width: 80%;
+            height: 346px;
         }
 
         .dolls a span{
@@ -126,7 +130,58 @@
         .friends .right_arrow{
             left: 97%;
         }
-        
+
+        /* BUY ME 버튼 */
+        .dolls button {
+          position: absolute;
+          display: none;
+          border-radius: 4px;
+          border: 0;
+          margin: 0 8px;
+          padding: 16px;
+          background: #41c2d5;
+          text-align: center;
+          font-weight: 500;
+          width: 360px;
+          height: 10%;
+          letter-spacing: 1px;
+        }
+
+        .dolls:hover {
+          border: #ececec 0.5px solid;
+        }
+
+        .dolls:hover button {
+          display: block;
+          animation-name: move;
+          animation-duration: 0.5s;
+          transform: translateY(-280%);
+        }
+
+        @keyframes move {
+          0% {
+            transform: translateY(-180%);
+          }
+          100% {
+            transform: translateY(-280%);
+          }
+        }
+
+        .buyme_button:hover {
+          background-color: #72cddb;
+        }
+
+        .slick-arrow:hover {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          background: rgba(255, 255, 255, 0.7);
+          top: calc(50% - 20px);
+          border-radius: 50%;
+          cursor: pointer;
+          z-index: 1;
+        }
+    
 
         /* 3개짜리 이미지 화면 */
         .big_dolls {
@@ -188,6 +243,8 @@
           width: 50px;
           height: 50px;
         }
+
+
         /* ============================================= */
         header{
           width: 100%;
@@ -660,14 +717,67 @@
         </div>
     </header>
     <main id="main_location">
-        <div>
-          <video class="animation" autoplay muted>
-            <source
-              type="video/mp4"
-              src="https://www.jellycat.com/images/video/FAST_FOOD_VIDEO_MAIN.MP4"
-            />
-          </video>
-        </div> 
+        
+
+
+
+      <div class="jb-box">
+
+        <a class="unmutePlayerButton" onclick="unmute()" type="button">
+          <img width="50px" height="50px" src="https://cdn-icons-png.flaticon.com/512/8134/8134628.png">
+        </a>
+        <a class="mutePlayerButton" onclick="mute()" href="javascript:void(0);">
+          <img width="50px" height="50px" src="https://cdn-icons-png.flaticon.com/512/4884/4884765.png">
+        </a>
+
+        <a href="javascript:void(0);" class="playpause">
+          <img width="50px" height="50px" src="https://cdn-icons-png.flaticon.com/512/2404/2404569.png">
+        </a>
+        
+        
+        <video id="hz" class="animation" autoplay muted loop>
+        <source
+        type="video/mp4"
+        src="https://www.jellycat.com/images/video/FAST_FOOD_VIDEO_MAIN.MP4"
+        />
+        </video>
+        </div>
+        
+        <script> 
+
+        var audio = document.getElementById("hz");
+
+          $(function(){
+            $('.playpause').on('click', function(e){
+              e = e || window.event;
+              var btn = e.target;
+              if (!audio.paused) {
+                //일시정지
+                audio.pause();
+                isPlaying = false;
+              } else {
+                //재생
+                audio.play();
+                isPlaying = true;
+              }
+            });
+          });
+
+        function unmute() {
+          const player = document.getElementById("hz");
+          player.muted = false;
+        }
+
+        function mute() {
+          const player = document.getElementById("hz");
+          player.muted = true;
+        }
+        </script> 
+
+
+
+
+
         <div id="middle_top_area" class="box">
           <div id="middle_comment_view">
             <span id="middle_comment">
@@ -694,74 +804,58 @@
                       <a href="https://www.jellycat.com/eu/amuseable-slice-of-pizza-a2sop/">
                           <img src="https://www.jellycat.com/images/products/medium/A2SOP.jpg"/>
                           <span>Amuseable Slice of Pizza<br>€35.00</span>
+                          <button class="buyme_button">BUY ME</button>
                       </a>                   
                   </li>
                   <li class="dolls">
                       <a href="https://www.jellycat.com/eu/amuseable-burger-a2bu/">
                         <img src="https://www.jellycat.com/images/products/medium/A2BU.jpg"/>
                         <span>Amuseable Burger<br>€38.00</span>
+                        <button class="buyme_button">BUY ME</button>
                       </a>                  
                   </li>
                   <li class="dolls">
                       <a href="https://www.jellycat.com/eu/amuseable-peanut-a6pe/">
                           <img src="https://www.jellycat.com/images/products/medium/A6PE.jpg"/>
                           <span>Amuseable Peanut<br>€19.00</span>
+                          <button class="buyme_button">BUY ME</button>
                       </a>                   
                   </li>
                   <li class="dolls">
                     <a href="https://www.jellycat.com/eu/amuseable-pain-au-raisin-a6parai/">
                       <img src="https://www.jellycat.com/images/products/medium/A6PARAI.jpg"/>
                       <span>Amuseable Pain Au Raisin<br>€23.00</span>
+                      <button class="buyme_button">BUY ME</button>
                     </a>
                   </li>
                   <li class="dolls">
                       <a href="https://www.jellycat.com/eu/amuseable-hot-dog-a6hd/">
                           <img src="https://www.jellycat.com/images/products/medium/A6HD.jpg"/>
                           <span>Amuseable Hot Dog<br>€32.00</span>
+                          <button class="buyme_button">BUY ME</button>
                       </a>                  
                   </li>
                   <li class="dolls">
                       <a href="https://www.jellycat.com/eu/amuseable-taco-a2tac/">
                           <img src="https://www.jellycat.com/images/products/medium/A2TAC.jpg"/>
                           <span>Amuseable Taco<br>€36.00</span>
+                          <button class="buyme_button">BUY ME</button>
                       </a>                   
                   </li>
                   <li class="dolls">
                     <a href="https://www.jellycat.com/eu/amuseable-sandwich-a2san/">
                           <img src="https://www.jellycat.com/images/products/medium/A2SAN.jpg"/>
                           <span>Amuseable Sandwich<br>€35.00</span>
+                          <button class="buyme_button">BUY ME</button>
                       </a>
                   </li>
                   <li class="dolls">
                       <a href="https://www.jellycat.com/eu/silly-sushi-nigiri-sil3n/">
                         <img src="https://www.jellycat.com/images/products/medium/SIL3N.jpg"/>
                           <span>Silly Suchi Nigiri<br>€20.00</span>
+                          <button class="buyme_button">BUY ME</button>
                       </a>                   
                   </li>
-                  <li class="dolls">
-                    <a href="https://www.jellycat.com/eu/amuseable-burger-a2bu/">
-                      <img src="https://www.jellycat.com/images/products/medium/A2BU.jpg"/>
-                      <span>Amuseable Burger<br>€38.00</span>
-                    </a>                  
-                </li>
-                <li class="dolls">
-                    <a href="https://www.jellycat.com/eu/amuseable-peanut-a6pe/">
-                        <img src="https://www.jellycat.com/images/products/medium/A6PE.jpg"/>
-                        <span>Amuseable Peanut<br>€19.00</span>
-                    </a>                   
-                </li>
-                <li class="dolls">
-                  <a href="https://www.jellycat.com/eu/amuseable-pain-au-raisin-a6parai/">
-                    <img src="https://www.jellycat.com/images/products/medium/A6PARAI.jpg"/>
-                    <span>Amuseable Pain Au Raisin<br>€23.00</span>
-                  </a>
-                </li>
-                <li class="dolls">
-                    <a href="https://www.jellycat.com/eu/amuseable-hot-dog-a6hd/">
-                        <img src="https://www.jellycat.com/images/products/medium/A6HD.jpg"/>
-                        <span>Amuseable Hot Dog<br>€32.00</span>
-                    </a>                  
-                </li>
               </ul>
               <p>
                   <span class="arrows left_arrow"><img src="./img/left-chevron_24.png"/></span>
@@ -844,88 +938,40 @@
           <div class="slide_wrapper">
               <ul class="slides">
                   <li class="dolls">
-                      <a href="https://www.jellycat.com/eu/amuseable-slice-of-pizza-a2sop/">
-                        <img src="https://www.jellycat.com/images/products/medium/A2SOP.jpg"/>
-                        <span>Amuseable Slice of Pizza<br>€35.00</span>
+                      <a href="https://www.jellycat.com/eu/bashful-beige-bunny-bas3b/">
+                        <img src="https://www.jellycat.com/images/products/medium/BAS3B.jpg"/>
+                        <span>Bashful Beige Bunny<br>€225.00</span>
+                        <button class="buyme_button">BUY ME</button>
                       </a>                   
                   </li>
                   <li class="dolls">
-                      <a href="https://www.jellycat.com/eu/amuseable-burger-a2bu/">
-                        <img src="https://www.jellycat.com/images/products/medium/A2BU.jpg"/>
-                        <span>Amuseable Burger<br>€38.00</span>
+                      <a href="https://www.jellycat.com/eu/bashful-toffee-puppy-bas3tpus/">
+                        <img src="https://www.jellycat.com/images/products/medium/BAS3TPUS.jpg"/>
+                        <span>Bashful Toffee Puppy<br>€29.00</span>
+                        <button class="buyme_button">BUY ME</button>
                       </a>                  
                   </li>
                   <li class="dolls">
-                      <a href="https://www.jellycat.com/eu/amuseable-peanut-a6pe/">
-                          <img src="https://www.jellycat.com/images/products/medium/A6PE.jpg"/>
-                          <span>Amuseable Peanut<br>€19.00</span>
+                      <a href="https://www.jellycat.com/eu/bashful-silver-bunny-with-personalised-jumper-jumpcbas3bs/">
+                          <img src="https://www.jellycat.com/images/products/medium/BAS3BC.jpg"/>
+                          <span>Bashful Cream Bunny<br>€29.00</span>
+                          <button class="buyme_button">BUY ME</button>
                       </a>                   
-                  </li>
-                  <li class="dolls">
-                    <a href="https://www.jellycat.com/eu/amuseable-pain-au-raisin-a6parai/">
-                      <img src="https://www.jellycat.com/images/products/medium/A6PARAI.jpg"/>
-                      <span>Amuseable Pain Au Raisin<br>€23.00</span>
-                    </a>
                   </li>
                   <li class="dolls">
                       <a href="https://www.jellycat.com/eu/amuseable-hot-dog-a6hd/">
-                          <img src="https://www.jellycat.com/images/products/medium/A6HD.jpg"/>
-                          <span>Amuseable Hot Dog<br>€32.00</span>
+                          <img src="https://www.jellycat.com/images/products/medium/JUMPCBAS3BS.jpg"/>
+                          <span>Bashful Silver Bunny with Personalised Jumper
+                            <br>€38.50</span>
+                          <button class="buyme_button">BUY ME</button>
                       </a>                  
                   </li>
-                  <li class="dolls">
-                      <a href="https://www.jellycat.com/eu/amuseable-taco-a2tac/">
-                          <img src="https://www.jellycat.com/images/products/medium/A2TAC.jpg"/>
-                          <span>Amuseable Taco<br>€36.00</span>
-                      </a>                   
-                  </li>
-                  <li class="dolls">
-                    <a href="https://www.jellycat.com/eu/amuseable-sandwich-a2san/">
-                          <img src="https://www.jellycat.com/images/products/medium/A2SAN.jpg"/>
-                          <span>Amuseable Sandwich<br>€35.00</span>
-                        </a>
-                      </li>
-                  <li class="dolls">
-                      <a href="https://www.jellycat.com/eu/silly-sushi-nigiri-sil3n/">
-                        <img src="https://www.jellycat.com/images/products/medium/SIL3N.jpg"/>
-                          <span>Silly Suchi Nigiri<br>€20.00</span>
-                      </a>                   
-                  </li>
-                  <li class="dolls">
-                    <a href="https://www.jellycat.com/eu/amuseable-burger-a2bu/">
-                      <img src="https://www.jellycat.com/images/products/medium/A2BU.jpg"/>
-                      <span>Amuseable Burger<br>€38.00</span>
-                    </a>                  
-                </li>
-                <li class="dolls">
-                    <a href="https://www.jellycat.com/eu/amuseable-peanut-a6pe/">
-                        <img src="https://www.jellycat.com/images/products/medium/A6PE.jpg"/>
-                        <span>Amuseable Peanut<br>€19.00</span>
-                    </a>                   
-                </li>
-                <li class="dolls">
-                  <a href="https://www.jellycat.com/eu/amuseable-pain-au-raisin-a6parai/">
-                    <img src="https://www.jellycat.com/images/products/medium/A6PARAI.jpg"/>
-                    <span>Amuseable Pain Au Raisin<br>€23.00</span>
-                  </a>
-                </li>
-                <li class="dolls">
-                    <a href="https://www.jellycat.com/eu/amuseable-hot-dog-a6hd/">
-                        <img src="https://www.jellycat.com/images/products/medium/A6HD.jpg"/>
-                        <span>Amuseable Hot Dog<br>€32.00</span>
-                    </a>                  
-                </li>
               </ul>
-              <p>
-                  <span class="arrows left_arrow"><img src="./img/left-chevron_24.png"/></span>
-                  <span class="arrows right_arrow"><img src="./img/chevron_24.png"/></span>
-              </p>
             </div>
           </div>
         </div>
         
         <script src="/js/main_page.js"></script>
-        <script src="/js/main_page2.js"></script>
 
 
 

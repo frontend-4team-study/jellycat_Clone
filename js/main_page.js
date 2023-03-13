@@ -50,4 +50,5 @@ let rightBtn = document.querySelector('.right_arrow');
     function setInitialPosition(){
         var initialTransValue = -(slideWidth) * slideCount;
         slides.style.transform = `translateX(${initialTransValue}px)`;
-    }
+}
+    
