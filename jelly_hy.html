@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link href="//db.onlinewebfonts.com/c/02408ccd8efcf169db4e41d6e0551118?family=NeueKabelW01-Regular" rel="stylesheet" type="text/css"/>
-    <title>Document</title>
+    <title>The Official Jellycat Site | Clone</title>
+    <link rel="shortcut icon" href="https://styles.redditmedia.com/t5_34e0ua/styles/communityIcon_ojw8d8o07yp51.png?width=256&v=enabled&s=9da02ecef6ecf20109b586d45b568deffad20e11">
     <style>
       
         * {
@@ -94,7 +95,7 @@
         }
 
         .slides li{
-            width: 380px;
+            width: 360px;
             height: 480px;
         }
 
@@ -108,7 +109,7 @@
         }
 
         .dolls a img{
-            width: 80%;
+            width: 100%;
             height: 346px;
         }
 
@@ -142,7 +143,7 @@
           background: #41c2d5;
           text-align: center;
           font-weight: 500;
-          width: 360px;
+          width: 340px;
           height: 10%;
           letter-spacing: 1px;
         }
@@ -160,7 +161,7 @@
 
         @keyframes move {
           0% {
-            transform: translateY(-180%);
+            transform: translateY(-200%);
           }
           100% {
             transform: translateY(-280%);
@@ -227,18 +228,15 @@
           border: #41c2d5 1px solid;
         }
         /* 상단 이동 버튼 */
-        .btn_gotop {
-          display: block;
-          position: fixed;
-          bottom: 35px;
-          right: 30px;
-          z-index: 999;
-          outline: none;
-          cursor: pointer;
-          padding: 30px 0px;
-          border-radius: 100%;
-          border: 0;
+        
+        a#MOVE_TOP_BTN {
+            position: fixed;
+            right: 2%;
+            bottom: 50px;
+            display: none;
+            z-index: 999;
         }
+
         .btn_gotop img {
           width: 50px;
           height: 50px;
@@ -1033,7 +1031,8 @@
         <div><a id="paraspar" href="https://www.paraspar.co.uk/">eCommerce by Paraspar</a></div>
       </main>
 
-      <a href="#top" id="up" class="btn_gotop">
+      <!-- 상단 올리기 버튼 -->
+      <a href="#" id="MOVE_TOP_BTN" class="btn_gotop">
         <span class="glyphicon glyphicon-chevron-up"> </span>
         <img
           src="http://www.mobilebase.co.kr/resource/images/btn/btn_top.png"
@@ -1051,14 +1050,26 @@
       </label>
       <div class="sidebar"></div>
 
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
     /* 상단 올리기 버튼 */
-      $("a#up").click(function(e){
-        e.preventDefault();
-        $("html, body").animate({scrollTop: 0}, 500);
-      })
+    $(function() {
+      $(window).scroll(function() {
+          if ($(this).scrollTop() > 500) {
+              $('#MOVE_TOP_BTN').fadeIn();
+          } else {
+              $('#MOVE_TOP_BTN').fadeOut();
+          }
+      });
+      
+      $("#MOVE_TOP_BTN").click(function() {
+          $('html, body').animate({
+              scrollTop : 0
+          }, 400);
+          return false;
+      });
+  });
       </script>
+
 </body>
 </html>
