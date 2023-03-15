@@ -20,6 +20,7 @@
     />
     <link rel="stylesheet" href="./css/itempage-style.css">
     <link rel="stylesheet" href="./css/itempage.css">
+  
     <script>   
       function stop(){
           return false;
@@ -45,35 +46,6 @@
       document.getElementById('signBtn').addEventListener('click', onClick);
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script>
-      $(function () {
-        const rate = 0.4;
-        const max = 5;
-        const percent = (rate / max) * 100;
-        $('#review')
-          .find('#back-score')
-          .css('width', percent + '%');
-      });
-      function changeImage(filename) {
-        let img = document.querySelector('#big-img');
-        img.setAttribute('src', filename);
-      }
-      function changelarge() {
-        document.getElementById('item-price').innerHTML = '€42.00';
-        document.getElementById('item-code').innerHTML = 'PNL2PN';
-      }
-      function changemedium() {
-        document.getElementById('item-price').innerHTML = '€28.00';
-        document.getElementById('item-code').innerHTML = 'PNM3PN';
-      }
-      function changesmall() {
-        document.getElementById('item-price').innerHTML = '€14.50';
-        document.getElementById('item-code').innerHTML = 'PNS3PN';
-      }
-      function changeaddtowishlist() {
-        document.getElementById('Added-to-wishlist').innerHTML = 'Added-to-wishlist';
-      }
-    </script>
   </head>
   <body>
     <header id="top" class="menu-bar con-min-width">
@@ -370,21 +342,21 @@
           <div class="container">
             <div class="radio-tile-group">
               <div class="input-container" id="large">
-                <input id="large-box" type="radio" name="radio" onclick="changelarge()" />
+                <input id="large-box" type="radio" name="size-box" onclick="changelarge()"/>
                 <div class="radio-tile">
-                  <label for="large">LARGE - H34 X W20 CM</label>
+                  <label for="large-box">LARGE - H34 X W20 CM</label>
                 </div>
               </div>
               <div class="input-container" id="medium">
-                <input id="medium-box" type="radio" name="radio" onclick="changemedium()" checked />
+                <input id="medium-box" type="radio" name="size-box" onclick="changemedium()" checked/>
                 <div class="radio-tile">
-                  <label for="medium">MEDIUM - H23 X W10 CM</label>
+                  <label for="medium-box">MEDIUM - H23 X W10 CM</label>
                 </div>
               </div>
               <div class="input-container" id="small">
-                <input id="small-box" type="radio" name="radio" onclick="changesmall()" />
+                <input id="small-box" type="radio" name="size-box" onclick="changesmall()" />
                 <div class="radio-tile">
-                  <label for="small">SMALL - H11 X W6 CM</label>
+                  <label for="small-box">SMALL - H11 X W6 CM</label>
                 </div>
               </div>
             </div>
@@ -813,9 +785,11 @@
         <div><a id="paraspar" href="https://www.paraspar.co.uk/">eCommerce by Paraspar</a></div>
     </footer>
     <script src="./js/slide.js"></script>
+    <script src="./js/scoreCalc.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/signMeUp.js"></script>
     <script src="./js/showMore.js"></script>
     <script src="./js/slideTopBtn.js"></script>
+    <script src="./js/changeThings.js"></script>
   </body>
 </html>
