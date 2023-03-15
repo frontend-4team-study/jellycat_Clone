@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
+    <link
+      href="//db.onlinewebfonts.com/c/02408ccd8efcf169db4e41d6e0551118?family=NeueKabelW01-Regular"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>The Official Jellycat Site | Clone</title>
+    <link
+      rel="shortcut icon"
+      href="https://styles.redditmedia.com/t5_34e0ua/styles/communityIcon_ojw8d8o07yp51.png?width=256&v=enabled&s=9da02ecef6ecf20109b586d45b568deffad20e11"
+    />
+    <link rel="stylesheet" href="./css/itempage-style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+      jQuery(document).ready(function(){
+        $(".mainmenu > li").mouseover(function(){
+          $(this).find(".submenu").stop().slideDown(500);
+        }).mouseout(function(){
+          $(this).find(".submenu").stop().slideUp(500);
+        });
+      });
+      // ==========================================
+
+      function onClick(){
+        document.querySelector('#emailError').style.display = 'block';
+      }
+      document.getElementById('signBtn').addEventListener('click', onClick);
+      function onClick(){
+        document.querySelector('#emailError').style.display = 'block';
+      }
+      document.getElementById('signBtn').addEventListener('click', onClick);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        const rate = 0.4;
+        const max = 5;
+        const percent = (rate / max) * 100;
+        $('#review')
+          .find('#back-score')
+          .css('width', percent + '%');
+      });
+      function changeImage(filename) {
+        let img = document.querySelector('#big-img');
+        img.setAttribute('src', filename);
+      }
+      function changelarge() {
+        document.getElementById('item-price').innerHTML = '€42.00';
+        document.getElementById('item-code').innerHTML = 'PNL2PN';
+      }
+      function changemedium() {
+        document.getElementById('item-price').innerHTML = '€28.00';
+        document.getElementById('item-code').innerHTML = 'PNM3PN';
+      }
+      function changesmall() {
+        document.getElementById('item-price').innerHTML = '€14.50';
+        document.getElementById('item-code').innerHTML = 'PNS3PN';
+      }
+      function changeaddtowishlist() {
+        document.getElementById('Added-to-wishlist').innerHTML = 'Added-to-wishlist';
+      }
+    </script>
+  </head>
+  <body>
+    <header id="top" class="menu-bar con-min-width">
+      <div class="main_grid">
+        <a class="main_a" href="https://jellycathelp.zendesk.com/hc/en-gb">Need Help?</a>
+        <a
+          class="main_a"
+          href="https://jellycathelp.zendesk.com/hc/en-gb/articles/6197990920209-What-are-your-gift-options-"
+          >Free Gift Message</a
+        >
+        <a
+          class="main_a"
+          href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery"
+          >Delivery Information</a
+        >
+      </div>
+      <div id="second_menu" class="con flex h-full">
+        <div id="header_logo">
+          <img
+            src="https://www.jellycat.com/images/core/new-logo-2022-v2-1.png"
+            alt="jellycat_brand_logo"
+          />
+        </div>
+        <nav class="menu-1 flex h-full">
+          <ul class="flex mainmenu">
+            <li>
+              <a href="#" class="flex h-full items-center ani_color">ANIMALS</a>
+              <div class="con-min-width address">
+                <div class="con">
+                  <ul class="submenu">
+                    <a href="https://www.jellycat.com/eu/all-animals/">ALL ANIMALS</a>
+                    <a href="https://www.jellycat.com/eu/amphibians-reptiles/"
+                      >Amphibians & Reptiles</a
+                    >
+                    <a href="https://www.jellycat.com/eu/arctic-antarctic/">Arctic & Antarctic</a>
+                    <a href="https://www.jellycat.com/eu/bears/">Bears</a>
+                    <a href="https://www.naver.com">Birds</a>
+                    <a href="https://www.naver.com">Bugs & Insects</a>
+                    <a href="https://www.naver.com">Bunnies</a>
+                    <a href="https://www.naver.com">Cats & Kittens</a>
+                    <a href="https://www.naver.com">Dogs & Puppies</a>
+                    <a href="https://www.naver.com">Dragons & Dinosaurs</a>
+                    <a href="https://www.naver.com">Farmyard</a>
+                    <a href="https://www.naver.com">Jungle & Safari</a>
+                    <a href="https://www.naver.com">Mythical Creatures</a>
+                    <a href="https://www.naver.com">Ocean</a>
+                    <a href="https://www.naver.com">Pets</a>
+                    <a href="https://www.naver.com">Woodland Animals</a>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="flex h-full items-center ani_color">AMUSEABLES</a>
+              <div class="con-min-width">
+                <div class="con">
+                  <ul class="submenu">
+                    <a href="" class="amuseables">ALL AMUSEABLES</a>
+                    <a href="" class="amuseables">Amuseable Objects</a>
+                    <a href="" class="amuseables">Food & Drink</a>
+                    <a href="" class="amuseables">Plants & Flowers</a>
+                    <a href="" class="amuseables">Woodland</a>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="flex h-full items-center ani_color">PERSONALISED</a>
+              <div class="con-min-width">
+                <div class="con">
+                  <ul class="submenu">
+                    <a href="" class="personalised">ALL PERSONALISED</a>
+                    <a href="" class="personalised">Personalised Bunnies</a>
+                    <a href="" class="personalised">Personalised Jumpers</a>
+                    <a href="" class="personalised">Personalised Soothers</a>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="flex h-full items-center ani_color">COLLECTIONS</a>
+              <div class="con-min-width">
+                <div class="conx">
+                  <ul class="submenu">
+                    <a href="" class="collections">ALL SOFT TOYS</a>
+                    <a href="" class="collections">New In</a>
+                    <a href="" class="collections">Amuseable Objects</a>
+                    <a href="" class="collections">Bashfuls</a>
+                    <a href="" class="collections">Bashful Bunnies </a>
+                    <a href="" class="collections">Beautifully Scrumptious</a>
+                    <a href="" class="collections">Big Toys</a>
+                    <a href="" class="collections">Blossom Bunnies</a>
+                    <a href="" class="collections">Colorful & Quirky</a>
+                    <a href="" class="collections">Cordy Roys</a>
+                    <a href="" class="collections">Dressed To Impress</a>
+                    <a href="" class="collections">Food & Drink</a>
+                    <a href="" class="collections">Fuddlewuddle</a>
+                    <a href="" class="collections">Little Legs</a>
+                    <a href="" class="collections">Long Legs</a>
+                    <a href="" class="collections">Mad Menagerie</a>
+                    <a href="" class="collections">Plants & Flowers</a>
+                    <a href="" class="collections">Pocket Pals </a>
+                    <a href="" class="collections">Sea Life</a>
+                    <a href="" class="collections">Spring Delights</a>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="flex h-full items-center ani_color">GIFT&nbsp;IDEAS</a>
+              <div class="con-min-width">
+                <div class="con">
+                  <ul class="submenu">
+                    <a href="" class="gigt_ideas">Most Loved</a>
+                    <a href="" class="gigt_ideas">Mother's Day Gifts</a>
+                    <a href="" class="gigt_ideas">Easter Gifts</a>
+                    <a href="" class="gigt_ideas">Never Too Old Gifts</a>
+                    <a href="" class="gigt_ideas">Personalised Gifts</a>
+                    <a href="" class="gigt_ideas">Big Toy Gifts</a>
+                    <a href="" class="gigt_ideas">Book & Toy Gifts</a>
+                    <a href="" class="gigt_ideas">Baby Gifts</a>
+                    <a href="" class="gigt_ideas">Anniversary Gifts</a>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="flex h-full items-center ani_color">BAGS</a>
+              <div class="con-min-width">
+                <div class="con">
+                  <ul class="submenu">
+                    <a href="" class="bags">ALL ACCESSORIES</a>
+                    <a href="" class="bags">Bags & Purses</a>
+                    <a href="" class="bags">Bag Charms</a>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="flex h-full items-center ani_color">BOOKS</a>
+              <div class="con-min-width">
+                <div class="con">
+                  <ul class="submenu">
+                    <a href="" class="books">ALL BOOKS</a>
+                    <a href="" class="books">If I Were Books</a>
+                    <a href="" class="books">Soft Books</a>
+                    <a href="" class="books">Story Books</a>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="flex h-full items-center ani_color">BABY</a>
+              <div class="con-min-width">
+                <div class="con">
+                  <ul class="submenu">
+                    <a href="" class="baby">ALL BABY GIFTS</a>
+                    <a href="" class="baby">Nursery Gifts</a>
+                    <a href="" class="baby">Activity Toys</a>
+                    <a href="" class="baby">Buggy Toys</a>
+                    <a href="" class="baby">Comforters & Soothers</a>
+                    <a href="" class="baby">Boing Balls</a>
+                    <a href="" class="baby">Gift Sets</a>
+                    <a href="" class="baby">Musical Pulls</a>
+                    <a href="" class="baby">Rattles & Ring Toys</a>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div id="header_imformation_icon">
+          <ul>
+            <a href="">
+              <li class="line_array">
+                <img
+                  class="imformation_icon"
+                  src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fchnwhq%2Fbtr1PN5ALwC%2FKvdMyAA9kIGVsyrtrKDIk1%2Fimg.png"
+                  alt="search_icon"
+                />
+              </li>
+            </a>
+            <a href="https://www.jellycat.com/eu/login/?target=myaccount%5Fpage">
+              <li class="line_array">
+                <img
+                  class="imformation_icon"
+                  src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmLavD%2Fbtr1JtNB2bf%2F4fR6d0keTCQ8HW1OYoHCz1%2Fimg.png"
+                  alt="person_icon"
+                />
+              </li>
+            </a>
+            <a href="https://www.jellycat.com/eu/wishlist/">
+              <li class="line_array">
+                <img
+                  class="imformation_icon"
+                  src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FxvNDR%2Fbtr1Jr96NRh%2FtbDePYGOxU5mcb1mzavbzk%2Fimg.png"
+                  alt="heart_icon"
+                />
+              </li>
+            </a>
+            <a href="https://www.jellycat.com/eu/basket/">
+              <li class="line_array">
+                <img
+                  class="imformation_icon"
+                  src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcXQNgv%2Fbtr1EdxKVNd%2FQzMl8aFwMO3PkCsKRDyOX0%2Fimg.png"
+                  alt="bag_icon"
+                />
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main-penguin">
+        <div class="item-form">
+      <div class="cartegories">
+        <a href="https://www.jellycat.com/eu/softtoys/" class="big-categories">Collections / </a>
+        <a href="https://www.jellycat.com/eu/little-legs/" class="small-categories"
+          >&nbsp;Little Legs
+        </a>
+      </div>
+      <div class="big-item-box">
+        <div class="images-box">
+        <div>
+          <div class="side-small-imgs">
+            <li class="item-imgs">
+              <button
+                class="itembutton"
+                onclick="changeImage('https://www.jellycat.com/images/products/large/PNM3PN.jpg')"
+              >
+                <img
+                  id="image1"
+                  src="https://www.jellycat.com/images/products/thumbnail/PNM3PN.jpg"
+                  alter="Option 1"
+                />
+              </button>
+            </li>
+            <li class="item-imgs">
+              <button
+                onclick="changeImage('https://www.jellycat.com/images/products/large/PNM3PN_1.jpg')"
+                type="button"
+              >
+                <img
+                  id="image2"
+                  src="https://www.jellycat.com/images/products/thumbnail/PNM3PN_1.jpg"
+                  alter="Option 2"
+                />
+              </button>
+            </li>
+            <li class="item-imgs">
+              <button
+                onclick="changeImage('https://www.jellycat.com/images/products/large/PNM3PN_2.jpg')"
+                type="button"
+              >
+                <img
+                  id="image3"
+                  src="https://www.jellycat.com/images/products/thumbnail/PNM3PN_2.jpg"
+                  alter="Option 3"
+                />
+              </button>
+            </li>
+          </div>
+        </div>
+        <img src="https://www.jellycat.com/images/products/large/PNM3PN.jpg" id="big-img" />
+    </div>
+        <div class="sellform">
+          <div class="top-item-select">
+            <div>
+              <p id="item-name">Peanut Penguin</p>
+              <p id="item-code">PNM3PN</p>
+              <div class="price-and-review">
+                <div id="item-price">€28.00</div>
+                <div id="review">
+                  <div class="score">
+                    <a id="front-score">☆☆☆☆☆</a>
+                    <a id="back-score">★★★★★</a>
+                  </div>
+                  <a id="reviewnumber">(43)</a>
+                  <a id="write-review" href="#">WRITE YOUR REVIEW</a>
+                </div>
+              </div>
+              <p id="waddle">Waddle this way!</p>
+            </div>
+          </div>
+          <div class="colour">
+            <p id="colour">COLOUR</p>
+            <input
+              id="img-in-colour"
+              type="image"
+              src="https://www.jellycat.com/images/products/large/PNM3PN.jpg"
+            />
+          </div>
+          <p id="sizetext">SIZE</p>
+          <div class="container">
+            <div class="radio-tile-group">
+              <div class="input-container" id="large">
+                <input id="large-box" type="radio" name="radio" onclick="changelarge()" />
+                <div class="radio-tile">
+                  <label for="large">LARGE - H34 X W20 CM</label>
+                </div>
+              </div>
+              <div class="input-container" id="medium">
+                <input id="medium-box" type="radio" name="radio" onclick="changemedium()" checked />
+                <div class="radio-tile">
+                  <label for="medium">MEDIUM - H23 X W10 CM</label>
+                </div>
+              </div>
+              <div class="input-container" id="small">
+                <input id="small-box" type="radio" name="radio" onclick="changesmall()" />
+                <div class="radio-tile">
+                  <label for="small">SMALL - H11 X W6 CM</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="buyoraddinwishlist">
+            <li class="buy-or-add-wishlist-buttons"><a id="buy-me" href="#">Buy Me</a></li>
+            <li class="buy-or-add-wishlist-buttons">
+              <a id="Added-to-wishlist" href="#" onclick="changeaddtowishlist()">Add to wishlist</a>
+            </li>
+          </ul>
+          <div class="in-out-stock">
+            <img
+              id="checkicon"
+              src="https://cdn.pixabay.com/photo/2017/03/28/01/46/check-mark-2180770__340.png"
+            />
+            In stock
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="details-great-big-box">
+        <div class="details-big-box">
+          <div class="title-of-product-detail">Product Details</div>
+          <div class="details-middle-box">
+            <div id="detail-outside-box">
+              <div id="detail-inside-box">
+                Adorable, snuggly and very, very cosy, let’s welcome the wonderful Peanut Penguin!
+                Vintage-inspired in the baby-softest fur, he’s got icebergs full of cute charisma!
+                Toddlers will love his friendly face and fuzzy flippers. Time to shake a tail
+                feather and slide across the snow!
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="accordion" id="answer01" />
+              <label for="answer01"
+                >SAFETY & CARE<em><img id="arrow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtPxZ3Cxr1i7A2dEDO1RMB7Z2r-IoTCxoyiA&usqp=CAU" /></em
+              ></label>
+              <div>
+                <ul id="details">
+                  <li>
+                    Tested to and passes the European Safety Standard for toys: EN71 parts 1, 2 & 3
+                    for all ages.
+                  </li>
+                  <li>
+                    Suitable from birth. Huge and Large sizes - please do not leave in a cot/ crib.
+                  </li>
+                  <li>
+                    Hand wash only; do not tumble dry, dry clean or iron. Not recommended to clean
+                    in a washing machine.
+                  </li>
+                  <li>Check all labels upon arrival of purchase.</li>
+                </ul>
+              </div>
+              <input type="radio" name="accordion" id="answer02" />
+              <label for="answer02"
+                >RETURNS<em><img id="arrow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtPxZ3Cxr1i7A2dEDO1RMB7Z2r-IoTCxoyiA&usqp=CAU" /></em
+              ></label>
+              <div>
+                <p>
+                  If after placing your order, you change your mind, or need to cancel or return
+                  your order for any reason, we will endeavour to make the process as simple,
+                  efficient and trouble free as we can. We offer you the opportunity to return your
+                  item for a refund within 60 days from the date you received it. *Please note: we
+                  are unable to refund or exchange items that have been personalised.
+                </p>
+
+                <p>
+                  <a href="#"
+                    >More information can be found in our Returns and Cancellations Policy ></a
+                  >
+                </p>
+              </div>
+              <input type="radio" name="accordion" id="answer03" />
+              <label for="answer03"
+                >DELIVERY INFORMATION<em><img id="arrow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtPxZ3Cxr1i7A2dEDO1RMB7Z2r-IoTCxoyiA&usqp=CAU" /></em
+              ></label>
+              <div>
+                <p>
+                  *Please allow an extra 7 days onto your expected delivery time for any
+                  personalised items, to allow our team time to embroider your item. To find out
+                  more about our available delivery methods such as our overseas options, pricing
+                  and timescales, please refer to our delivery page where you can find out all
+                  available options, along with all other delivery related questions.
+                </p>
+
+                <p><a href="#">For more information, please see our Delivery Section ></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 상단 올리기 버튼 -->
+    <a href="#" id="MOVE_TOP_BTN" class="btn_gotop">
+      <span class="glyphicon glyphicon-chevron-up"> </span>
+      <img src="http://www.mobilebase.co.kr/resource/images/btn/btn_top.png" />
+    </a>
+
+    <!-- 사람 버튼 -->
+    <input type="checkbox" id="menuicon" />
+    <label for="menuicon">
+      <span>
+        <img
+          class="humanImg"
+          src="https://developer.apple.com/assets/elements/icons/accessibility/accessibility-128x128_2x.png"
+        />
+      </span>
+    </label>
+    <div class="sidebar"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      /* 상단 올리기 버튼 */
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 500) {
+            $('#MOVE_TOP_BTN').fadeIn();
+          } else {
+            $('#MOVE_TOP_BTN').fadeOut();
+          }
+        });
+
+        $('#MOVE_TOP_BTN').click(function () {
+          $('html, body').animate(
+            {
+              scrollTop: 0,
+            },
+            400
+          );
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
