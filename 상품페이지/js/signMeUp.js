@@ -1,3 +1,4 @@
+
 function onClick(){
     document.querySelector('#emailError').style.display = 'block';
 }

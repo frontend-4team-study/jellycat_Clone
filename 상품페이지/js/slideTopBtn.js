@@ -13,5 +13,3 @@ function makeDown(){
 
 document.getElementById('meet').addEventListener('click', makeDown);
 document.getElementById('viewed').addEventListener('click', makeAbove);
-
-
