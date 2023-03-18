@@ -522,4 +522,5 @@ input[id='menuicon']:checked + label + div {
 .humanImg {
   width: 50px;
   height: 50px;
+  color: black;
 }
