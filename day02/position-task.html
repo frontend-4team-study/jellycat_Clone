@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position 실습</title>
+    <style>
+      body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      div.img {
+        /* flex-direction: column; */
+        position: relative;
+        top: 245px;
+        width: 220px;
+        height: 315px;
+        background-image: url(http://koreaitacademy.com/renewal2021/img/tch/teacher007.png);
+        background-size: 100%;
+        background-position: center;
+        margin: 0 auto;
+        z-index: 1;
+      }
+      #cigarette {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 380px;
+        left: 781px;
+        z-index: 2;
+      }
+      #sunglass {
+        position: absolute;
+        width: 101px;
+        height: 79px;
+        top: 311px;
+        left: 778px;
+        z-index: 2;
+      }
+      #circle {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        top: 245px;
+        left: 660px;
+        z-index: 2;
+      }
+      #kingsman {
+        position: absolute;
+        width: 900px;
+        height: 250px;
+        top: -20px;
+        left: 401px;
+        z-index: 2;
+      }
+      #blackback {
+        width: 1710px;
+        height: 1067px;
+      }
+      #collection {
+        position: absolute;
+        width: 400px;
+        height: 323px;
+        top: 0;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="img"></div>
+      <div><img src="images/cigarette.png" id="cigarette" /></div>
+      <div><img src="images/sunglass.png" id="sunglass" /></div>
+      <div><img src="images/circle.png" id="circle" /></div>
+      <div><img src="images/kingsman2.png" id="kingsman" /></div>
+      <div><img src="images/black.avif" id="blackback" /></div>
+      <div><img src="images/collection.jpg" id="collection" /></div>
+    </div>
+  </body>
+</html>

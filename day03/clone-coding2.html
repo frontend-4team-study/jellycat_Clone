@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스 101</title>
+    <style>
+      body>div {
+        position: relative;
+        z-index: 0;
+      }
+
+      html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+      }
+
+      .css-l0c4py {
+        -webkit-box-pack: center;
+        justify-content: center;
+      }
+
+      .css-5e98i0 {
+        margin-top: unset;
+        margin-bottom: unset;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .css-alqc3y {
+        max-width: 480px;
+        padding-left: 32px;
+        padding-right: 32px px;
+        border-radius: 20px;
+        overflow: hidden;
+        z-index: 0;
+      }
+      .css-egw0i5 {
+        min-height: 392px;
+        padding-top: 36px;
+        padding-bottom: 36px;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+      }
+      .css-ykvgqz {
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        -webkit-box-align: stretch;
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .css-1o528t3 {
+        flex: 1 1 20px;
+        display: flex;
+      }
+
+      .css-zsoya5 {
+        display: flex;
+        -webkit-box-align: stretch;
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .css-15zhte1 {
+        display: flex;
+        -webkit-box-align: stretch;
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .css-1o7v4wx {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .css-3kqv01 {
+        display: flex;
+        visibility: inherit;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-direction: row;
+      }
+
+      .css-19rwgym {
+        width: 2px;
+        display: flex;
+      }
+
+      .css-1bc1yxd {
+        width: 20px;
+        height: 20px;
+      }
+
+      .css-19rwgym {
+        width: 2px;
+        display: flex;
+      }
+
+      .css-oofvv2 {
+        width: 2px;
+        height: 0px;
+      }
+
+      .css-1bep15o {
+        width: 4px;
+        display: flex;
+      }
+
+      .css-1f75ggl {
+        line-height: 1.25rem;
+      }
+
+      .css-2oxta8 {
+        border-width: 0px;
+        color: var(--system-on-color);
+        margin: 0px;
+        padding: 0px;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25rem;
+      }
+
+      .css-1bep15o {
+        width: 4px;
+        display: flex;
+      }
+
+      .css-1labwoc {
+        height: 12px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      element.style {
+        color: rgb(243, 243, 243);
+        --system-on-color: #f3f3f3;
+      }
+      .css-lw43zm {
+        border-width: 0;
+        color: #747474;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+      }
+
+      .css-iiuncx {
+        width: 8px;
+        height: 0;
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+
+      .css-lw43zm {
+        border-width: 0;
+        color: #747474;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+      }
+
+      .css-iiuncx {
+        width: 8px;
+        height: 0;
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+
+      .css-9ce8tn {
+        border-width: 0;
+        color: #f3f3f3;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+      }
+
+      .css-1wgpa9i {
+        border-width: 0;
+        color: #747474;
+        margin: 0;
+        padding: 0;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+      }
+
+      .css-iiuncx {
+        width: 8px;
+        height: 0;
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+
+      .css-1cse90k {
+        border-width: 0;
+        color: #f3f3f3;
+        margin: 0;
+        padding: 0;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+      }
+    </style>
+  </head>
+  <main>
+
+
+    <body>
+      <noscript>
+        현재 사용 중인 브라우저는 스크립트를 지원하지 않거나, 해당 기능이 활성화되어 있지 않습니다!
+      </noscript>
+      <div id="__next"></div>
+        <main>
+          <!-- 로그인을 묶는 가장 큰 틀-->
+          <div class="css-l0c4py">
+            <!--로그인 라인-->
+            <div class="css-5e98i0">
+              <!--로그인 창-->
+              <div class="css-alqc3y">
+                <!--로그인 창 세부 영역-->
+                <div class="css-egw0i5">
+                  <!--로그인 title-->
+                  <div class="css-ykvgqz">
+                    <h3>로그인</h3>
+                  </div>
+                  <!--문단 띄우기-->
+                  <div class="css-1o528t3"></div>
+                  <!--1. 카카오톡으로 로그인, 2. 다른 방법으로 로그인-->
+                  <div class="css-zsoya5">
+                    <!--1. 카카오톡으로 로그인 큰 틀-->
+                    <div class="css-zsoya5">
+                      <!--왜 같은 영역의 div가 2개인지는 모르겠지만 1. 카카오톡으로 로그인-->
+                      <div class="css-15zhte1">
+                        <!--클릭하면 사이트 이동이라 a태그로 착각할 수 있지만 button으로 구현되었음(1. button누르면 카카오톡으로 로그인 창으로 이동)-->
+                        <button
+                          class="css-1o7v4wx"
+                          style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3"
+                        >
+                          <!--before는 뭔지 모르겠음-->
+                          ::before
+                          <!--카카오톡으로 로그인 영역 작은 틀 (카카오톡 아이콘을 포함해서)-->
+                          <div class="css-3kqv01">
+                            <!--눈에 보이지도 않는 아주 미세한 영역이라 알기가 힘듬-->
+                            <div class="css-19rwgym"></div>
+                            <!--카카오톡 아이콘 영역만-->
+                            <span class="css-1bc1yxd">
+                              <!--카카오톡 아이콘 넣기-->
+                              <svg viewBox="0 0 24 24" class="css-1oe6l0y">
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M11.9997 2.5C6.24348 2.5 1 6.32322 1 11.0393c0 2.9316 1.90428 5.5179 4.80469 7.0555l-1.22042 4.4795c-.10756.3967.34284.7126.68935.4828l5.34918-3.5482c.4516.044.9106.0691 1.3769.0691C18.0755 19.578 23 15.7548 23 11.0393 23 6.32322 18.0755 2.5 11.9997 2.5Z"
+                                  class="css-1fwqr1t"
+                                ></path>
+                              </svg>
+                            </span>
+                            <!--미세한 것들 3개-->
+                            <div class="css-19rwgym"></div>
+                            <div class="css-oofvv2"></div>
+                            <div class="css-1bep15o"></div>
+                            <!--카카오톡으로 로그인 글씨 제어-->
+                            <span class="css-1f75ggl">
+                              <!--카카오톡으로 로그인 글씨-->
+                              <p class="css-2oxta8">카카오로 로그인</p>
+                            </span>
+                            <!--미세한 것-->
+                            <div class="css-1bep15o"></div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="css-1labwoc"></div>
+                    <a
+                      target="_self"
+                      class="css-1o7v4wx"
+                      href="/ko/login/all"
+                      style="color: rgb(243, 243, 243); --system-on-color: #f3f3f3"
+                    ></a>
+                  </div>
+                  <div class="css-12pdxu3"></div>
+                  <div class="css-127tnbc">
+                    <a href="/ko/register"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="css-1f4co1b">
+                <div class="css-1xifn78">
+                  <a href="/ko/register">
+                    <div class="css-2n6tbj">
+                      <h6 class="css-lw43zm">아직 클래스101 회원이 아니신가요?</h6>
+                      <div class="css-iiuncx"></div>
+                      <h6 class="css-9ce8tn">회원가입</h6>
+                    </div>
+                    <div class="css-1nh92gc">
+                      <p class="css-1wgpa9i">아직 클래스101 회원이 아니신가요?</p>
+                      <div class="css-iiuncx"></div>
+                      <p class="css-1cse90k">회원가입</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </body>
+    </html>
+  </main>

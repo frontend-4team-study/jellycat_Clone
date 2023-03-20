@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <title>flex</title>
+    <style>
+      body {
+        font-family: 'Gowun Dodum', sans-serif;
+        font-weight: bold;
+      }
+
+      #wrap {
+        width: 300px;
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+      }
+
+      div.container {
+        width: 100px;
+        text-align: center;
+        background-color: pink;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="container">DIV1</div>
+      <div class="container">DIV2</div>
+      <div class="container">DIV3</div>
+    </div>
+  </body>
+</html>
