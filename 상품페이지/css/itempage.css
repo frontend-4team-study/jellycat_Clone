@@ -1,513 +1,510 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
-
-        *{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-decoration: none;
-            /* overflow-x: hidden; */
-            text-decoration-line: none;
-            color: #242526;
-            font: var(--primary-font);
-            box-sizing: border-box;
-        }
-        :root{
-            --primary-color:#41C2D5;
-            --primary-font:'Josefin Sans', sans-serif;
-        }
-
-        /*Reviews*/
-        .reviews{
-            width: 1152px;
-            height: 800px;
-            font-family: var(--primary-font);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            margin: 0 auto;
-        }
-
-        .reviews_top{
-            height: 110px;
-            padding-top: 50px;
-        }
-
-        .reviews_top #reviews{
-            font-size: 30px;
-            padding-left: 27%;
-        }
-
-        .reviews_top #please{
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: -1px;
-            margin-top: 15px;
-        }
-
-        #openBtn{
-            position: absolute;
-            left: 80%;
-            top: 4%;
-            width: 200px;
-            height: 41px;
-            border: none;
-            border-radius: 5px;
-            background-color: var(--primary-color);
-            font-family: var(--primary-font);
-            font-size: 17px;
-        }
-
-        .reviews_top button:hover{
-            background-color: rgba(65, 194, 213, 40%);
-            transition: all 0.5s;
-        }
-
-        #modal_bg{
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            content: "";
-            width: 100%;
-            height: 100%;
-            background-color: rgba(36,37,38,0.6);
-            z-index: 1;
-        }
-
-        .modal_body{
-            display: none;
-            width: 580px;
-            position: absolute;
-            top: 2%;
-            left: 30%;
-            z-index: 2;
-            font: var(--primary-font);
-        }
-
-        #closeBtn{
-            display: inline-block;
-            background-color: var(--primary-color);
-            width: 102px;
-            height: 40px;
-            border: none;
-            border-radius: 5px 5px 0 0;
-            font-size: 16px;
-            margin-left: 82.5%;
-        }
-
-        .modal_contents{
-            background-color: #fff;
-            height: 660px;
-            padding: 3% 0 0 3%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        #modal_title{
-            font-size: 20px;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-        }
-
-        #rating{
-            color: #999999;
-            font-size: 13px;
-        }
-
-        .modal_contents textarea{
-            margin-top: 30px;
-            height: 130px;
-        }
-        .modal_contents textarea::placeholder{
-            color: #ddd;
-            font-size: 15px;
-            font-weight: 400;
-            padding: 1% 0 0 1%;
-        }
-
-        .modal_contents input{
-            border: none;
-            width: 545px;
-            height: 40px;
-        }
-
-        .modal_contents input::placeholder{
-            color: #ddd;
-            font-size: 15px;
-            font-weight: 400;
-            padding-left: 1%;
-        }
-
-        .hoverLine{
-            width: 545px;
-            color: #ddd;
-            border: solid 1px #ddd;
-            margin-bottom: 10px;
-        }
-
-        .hoverLine:hover{
-            border-color: #242526;
-        }
-
-        #recommendation{
-            color: #242526;
-            font-size: 14px;
-            letter-spacing: -1px;
-        }
-
-        .modal_contents select{
-            color: #242526;
-            height: 40px;
-        }
-        .modal_contents select option{
-            color: #242526;
-        }
-        .robot{
-            width: 320px;
-            height: 70px;
-            background-color: #f9f9f9;
-            border: solid 1px #d3d3d3;
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .robot input{
-            width: 30px;
-            position: absolute;
-            left: 10px;
-            top: 12px;
-        }
-
-        .robot label{
-            position: absolute;
-            left: 50px;
-            top: 23px;
-            font-size: 14px;
-        }
-        
-        .robot img{
-            width: 32px;
-            height: 32px;
-            padding-left: 85%;
-            margin-top: 7px;
-        }
-
-        #logoText{
-            font-size: 8px;
-            color: #555;
-            margin-left: 80%;
-        }
-
-        .robot a{
-            font-size: 10px;
-            color: #555;
-        }
-
-        #privacy{
-            margin-left: 70%;
-        }
-
-        .robot a:hover{
-            text-decoration-line: underline;
-        }
-
-        #continueBtn{
-            width: 545px;
-            height: 40px;
-            color: #fff;
-            background-color: #666666;
-            border: none;
-            border-radius: 5px;
-            margin: 10px 0;
-
-        }
-
-        #continueBtn:hover{
-            background-color: #999999;
-            transition: all 0.5s;
-        }
-
-        .contents{
-            border-top: solid 1px #eee;
-            width: 78rem;
-            padding: 10px 0 30px 0;
-        }
-
-        .contents_top{
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
-
-        .contents_topLeft{
-            font-size: 20px;
-        }
-
-        .reviewStars{
-            color:#41C2D5;
-        }
-
-        .contents_topRight{
-            color: #666666;
-            font-weight: bolder;
-            font-style: italic;
-        }
-
-        .contents_bottom{
-            line-height: 25px;
-        }
-
-        #addBtn {
-            width: 500px;
-            height: 40px;
-            border: none;
-            border-radius: 5px;
-            background-color: #FDA139;
-            font-family: var(--primary-font);
-            font-size: 15px;
-            margin-left:30%;
-            margin-top: 25px;
-        }
-
-        #addBtn:hover{
-            background-color: #ff8700;
-            transition: all 0.5s;
-        }
-
-        .additional{
-            display: none;
-        }
-
-        .original button a{
-            color: #fff;
-        }
-
-
-        /*Meet My Little Legs Friends*/
-
-        .friends{
-            height: 650px;
-            font-family: var(--primary-font);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 1%;
-        }
-
-        .friends_title{
-            margin-bottom: 2%;
-            display: flex;
-        }
-        
-        .friends_title input{
-            opacity: 0;
-            z-index: 2;
-            position: absolute;
-        }
-
-        #meetFriends{
-            width: 432px;
-            height: 64px;
-        }
-
-        #recentlyViewed{
-            width: 301px;
-            height: 64px;
-        }
-
-        .friends_title label{
-            z-index: 1;
-            display: inline-block;
-            font-family: var(--primary-font);
-            height: 40px;
-            font-size: 26px;
-            font-weight: 400;
-            margin: 20px 60px 0 50px;
-            color: #d3d3d3;
-            border: none;
-        }
-
-        #layer_1{
-            z-index: 3;
-        }
-
-        #layer_2{
-            position: absolute;
-            margin-top: 100px;
-            z-index: 0;
-            width: 100%;
-            height: 500px;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #layer_2 li{
-            width: 380px;
-            height: 480px;  
-        }
-
-        input:checked+.friendsBtn_title{
-            border-top: solid 2px var(--primary-color);
-        }
-
-        input:checked+.friendsBtn_title label{
-            color: #000;
-        }
-        
-        .slide_wrapper{
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden; 
-        }
-        
-        .slides{
-            position: absolute;
-            top: 0;
-            display: flex;
-            left: 0px;
-            transition: left 0.5s ease-out;
-
-        }
-
-        .slides.animated{
-            transition: left 0.5s ease-out;
-        }
-
-        .slides li{
-            width: 380px;
-            height: 480px;
-        }
-
-        .slides li:hover{
-            border: solid 1px #eee;
-        }
-
-        .dolls a img{
-            width: 364px;
-            height: 364px;
-        }
-
-        .dolls a span{
-            display: flex;
-            flex-direction: column;
-            line-height: 50px;
-            text-align: center;
-        }
-        .friends .arrows{
-            position: absolute;
-            top: 50%;
-        }
-        
-        .friends .left_arrow{            
-            left: 1%;
-        }
-
-        .friends .right_arrow{
-            left: 97%;
-        }
-        
-        /*Jellycat Newsletter*/
-        .newsletter{
-            height: 280px;
-            font-family: var(--primary-font);
-            border-top: solid 6px var(--primary-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        #news_1{
-            margin-top: 10px;
-            margin-bottom: -20px;
-            font-size: 30px;
-            font-weight: bold;
-            letter-spacing: -1px;
-        }
-        
-        #news_2{
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: -20px;
-        }
-
-        #news_3{
-            font-size: 15px;
-            text-align: center;
-            line-height: 25px;
-            margin-bottom: -15px;
-        }
-
-        .newsletter .sign{
-            margin-bottom: 10px;
-        }
-
-        .newsletter .sign input{
-            width: 350px;
-            height: 40px;
-            border: solid 1px #ddd;
-        }
-
-        #signBtn{
-            width: 150px;
-            height: 40px;
-            background-color: var(--primary-color);
-            border-radius: 5px;
-            border: none;
-            font-family: var(--primary-font);
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        #emailError{
-            display: none;
-            color: #c92929;
-            text-align: center;
-            font-size: 13px;
-            letter-spacing: -0.5px;
-            padding-top: 10px;
-        }
-        /*footer*/
-        footer{
-            height: 296px;
-            background-color: var(--primary-color);
-            font-size: 16px;
-            font-family: var(--primary-font);        
-            position: relative;
-        }
-
-        .footer_grid{
-            position: absolute;
-            top: 10%;
-            left: 13%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-
-        .footer_title{
-            display: inline-block;
-            font-weight: bold;     
-            margin-bottom: 10px;       
-        }
-
-        .footer_list{
-            list-style: none;
-            font-weight: 400;
-            padding-left: 0;    
-            line-height: 32px;
-            margin-right: 50px;
-        }
-
-        #paraspar{
-            position: absolute;
-            font-weight: 400;
-            color: #999999;
-            display: block;
-            text-align: right;
-            top: 90%;
-            left: 75%;
-        }
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  /* overflow-x: hidden; */
+  text-decoration-line: none;
+  color: #242526;
+  font: var(--primary-font);
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #41c2d5;
+  --primary-font: "Josefin Sans", sans-serif;
+}
+
+/*Reviews*/
+.reviews {
+  width: 1152px;
+  height: 800px;
+  font-family: var(--primary-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.reviews_top {
+  height: 110px;
+  padding-top: 50px;
+}
+
+.reviews_top #reviews {
+  font-size: 30px;
+  padding-left: 27%;
+}
+
+.reviews_top #please {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-top: 15px;
+}
+
+#openBtn {
+  position: absolute;
+  left: 80%;
+  top: 4%;
+  width: 200px;
+  height: 41px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-size: 17px;
+}
+
+.reviews_top button:hover {
+  background-color: rgba(65, 194, 213, 40%);
+  transition: all 0.5s;
+}
+
+#modal_bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 37, 38, 0.6);
+  z-index: 1;
+}
+
+.modal_body {
+  display: none;
+  width: 580px;
+  position: absolute;
+  top: 2%;
+  left: 30%;
+  z-index: 2;
+  font: var(--primary-font);
+}
+
+#closeBtn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  width: 102px;
+  height: 40px;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  font-size: 16px;
+  margin-left: 82.5%;
+}
+
+.modal_contents {
+  background-color: #fff;
+  height: 660px;
+  padding: 3% 0 0 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#modal_title {
+  font-size: 20px;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+#rating {
+  color: #999999;
+  font-size: 13px;
+}
+
+.modal_contents textarea {
+  margin-top: 30px;
+  height: 130px;
+}
+.modal_contents textarea::placeholder {
+  color: #ddd;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 1% 0 0 1%;
+}
+
+.modal_contents input {
+  border: none;
+  width: 545px;
+  height: 40px;
+}
+
+.modal_contents input::placeholder {
+  color: #ddd;
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 1%;
+}
+
+.hoverLine {
+  width: 545px;
+  color: #ddd;
+  border: solid 1px #ddd;
+  margin-bottom: 10px;
+}
+
+.hoverLine:hover {
+  border-color: #242526;
+}
+
+#recommendation {
+  color: #242526;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+.modal_contents select {
+  color: #242526;
+  height: 40px;
+}
+.modal_contents select option {
+  color: #242526;
+}
+.robot {
+  width: 320px;
+  height: 70px;
+  background-color: #f9f9f9;
+  border: solid 1px #d3d3d3;
+  border-radius: 2px;
+  position: relative;
+}
+
+.robot input {
+  width: 30px;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+
+.robot label {
+  position: absolute;
+  left: 50px;
+  top: 23px;
+  font-size: 14px;
+}
+
+.robot img {
+  width: 32px;
+  height: 32px;
+  padding-left: 85%;
+  margin-top: 7px;
+}
+
+#logoText {
+  font-size: 8px;
+  color: #555;
+  margin-left: 80%;
+}
+
+.robot a {
+  font-size: 10px;
+  color: #555;
+}
+
+#privacy {
+  margin-left: 70%;
+}
+
+.robot a:hover {
+  text-decoration-line: underline;
+}
+
+#continueBtn {
+  width: 545px;
+  height: 40px;
+  color: #fff;
+  background-color: #666666;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#continueBtn:hover {
+  background-color: #999999;
+  transition: all 0.5s;
+}
+
+.contents {
+  border-top: solid 1px #eee;
+  width: 78rem;
+  padding: 10px 0 30px 0;
+}
+
+.contents_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.contents_topLeft {
+  font-size: 20px;
+}
+
+.reviewStars {
+  color: #41c2d5;
+}
+
+.contents_topRight {
+  color: #666666;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.contents_bottom {
+  line-height: 25px;
+}
+
+#addBtn {
+  width: 500px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fda139;
+  font-family: var(--primary-font);
+  font-size: 15px;
+  margin-left: 30%;
+  margin-top: 25px;
+}
+
+#addBtn:hover {
+  background-color: #ff8700;
+  transition: all 0.5s;
+}
+
+.additional {
+  display: none;
+}
+
+.original button a {
+  color: #fff;
+}
+
+/*Meet My Little Legs Friends*/
+
+.friends {
+  height: 650px;
+  font-family: var(--primary-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+}
+
+.friends_title {
+  margin-bottom: 2%;
+  display: flex;
+}
+
+.friends_title input {
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+}
+
+#meetFriends {
+  width: 432px;
+  height: 64px;
+}
+
+#recentlyViewed {
+  width: 301px;
+  height: 64px;
+}
+
+.friends_title label {
+  z-index: 1;
+  display: inline-block;
+  font-family: var(--primary-font);
+  height: 40px;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 20px 60px 0 50px;
+  color: #d3d3d3;
+  border: none;
+}
+
+#layer_1 {
+  z-index: 3;
+}
+
+#layer_2 {
+  position: absolute;
+  margin-top: 100px;
+  z-index: 0;
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+#layer_2 li {
+  width: 380px;
+  height: 480px;
+}
+
+input:checked + .friendsBtn_title {
+  border-top: solid 2px var(--primary-color);
+}
+
+input:checked + .friendsBtn_title label {
+  color: #000;
+}
+
+.slide_wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  top: 0;
+  display: flex;
+  left: 0px;
+  /* transition: left 0.5s ease-out; */
+}
+
+.slides.animated {
+  transition: left 0.5s ease-out;
+}
+
+.slides li {
+  width: 380px;
+  height: 480px;
+}
+
+.slides li:hover {
+  border: solid 1px #eee;
+}
+
+.dolls a img {
+  width: 364px;
+  height: 364px;
+}
+
+.dolls a span {
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+  text-align: center;
+}
+.friends .arrows {
+  position: absolute;
+  top: 50%;
+}
+
+.friends .left_arrow {
+  left: 1%;
+}
+
+.friends .right_arrow {
+  left: 97%;
+}
+
+/*Jellycat Newsletter*/
+.newsletter {
+  height: 280px;
+  font-family: var(--primary-font);
+  border-top: solid 6px var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#news_1 {
+  margin-top: 10px;
+  margin-bottom: -20px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+#news_2 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: -20px;
+}
+
+#news_3 {
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  margin-bottom: -15px;
+}
+
+.newsletter .sign {
+  margin-bottom: 10px;
+}
+
+.newsletter .sign input {
+  width: 350px;
+  height: 40px;
+  border: solid 1px #ddd;
+}
+
+#signBtn {
+  width: 150px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  border: none;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#emailError {
+  display: none;
+  color: #c92929;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  padding-top: 10px;
+}
+/*footer*/
+footer {
+  height: 296px;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  font-family: var(--primary-font);
+  position: relative;
+}
+
+.footer_grid {
+  position: absolute;
+  top: 10%;
+  left: 13%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer_title {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer_list {
+  list-style: none;
+  font-weight: 400;
+  padding-left: 0;
+  line-height: 32px;
+  margin-right: 50px;
+}
+
+#paraspar {
+  position: absolute;
+  font-weight: 400;
+  color: #999999;
+  display: block;
+  text-align: right;
+  top: 90%;
+  left: 75%;
+}
