@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*헤더 영역*/
+      /*신경 쓸 것 : 
+      1. 해상도(다른 사람과 나의 해상도는 다르다.)
+      2. 가독성
+      3. 가로 스크롤 안 생기게 만들기*/
+
+      .header_style {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 300px;
+      }
+
+      .menu {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-decoration: none;
+      }
+
+      /*검색관련*/
+
+      #body {
+        overflow-x: hidden;
+      }
+
+      .search {
+        text-align: center;
+        position: relative;
+        bottom: 250px;
+      }
+      #search {
+        border-radius: 36px;
+        border: none;
+        width: 900px;
+        height: 60px;
+        font-size: 25px;
+        padding-left: 70px;
+      }
+      #search_icon {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        top: 8px;
+        right: 880px;
+      }
+      #collect6{
+        text-align: center;
+      }
+      .p1 {
+        border: solid 1px;
+        width: 500px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 3px;
+        border-color: gray;
+        color: gray;
+        list-style: none;
+      }
+      h2{
+        text-align: center;
+      }
+      #border_top{
+        border-top: 0.5px solid black;
+        margin-top: 60px;
+        position: relative;
+        width: 65%;
+        left: 17.3%;
+      }
+      #border_top2{
+        border-top: 0.5px solid black;
+        margin-top: 110px;
+        position: relative;
+        width: 65%;
+        left: 17.3%;
+      }
+      #border_top3{
+        border-top: 0.5px solid black;
+        margin-top: 100px;
+        position: relative;
+        width: 65%;
+        left: 17.3%;
+      }
+      #border_top4{
+        border-top: 0.5px solid black;
+        margin-top: 100px;
+        position: relative;
+        width: 65%;
+        left: 17.3%;
+      }
+      #border_top5{
+        border-top: 0.5px solid black;
+        margin-top: 100px;
+        position: relative;
+        width: 65%;
+        left: 17.3%;
+      }
+      #border_top6{
+        border-top: 0.5px solid black;
+        margin-top: 100px;
+        position: relative;
+        width: 65%;
+        left: 17.3%;
+      }
+      #border_top7{
+        border-top: 0.5px solid black;
+        margin-top: 130px;
+      }
+      #comment{
+        width: 30px;
+        height: 30px;
+      }
+      #page_p{
+        position: absolute;
+        top: 930px;
+        left: 1100px;
+      }
+      #a1{
+        position: absolute;
+        top: 900px;
+        left: 300px;
+      }
+      #p1{
+        position: absolute;
+        top: 930px;
+        left: 300px;
+      }
+      #comment{
+        position: absolute;
+        top: 945px;
+        left: 1335px;
+      }
+      #num{
+        position: absolute;
+        top: 930px;
+        left: 1375px;
+      }
+      #comment2{
+        width: 30px;
+        height: 30px;
+      }
+      #page_p2{
+        position: absolute;
+        top: 1030px;
+        left: 1100px;
+      }
+      #a2{
+        position: absolute;
+        top: 1000px;
+        left: 300px;
+      }
+      #p2{
+        position: absolute;
+        top: 1030px;
+        left: 300px;
+      }
+      #comment2{
+        position: absolute;
+        top: 1045px;
+        left: 1335px;
+      }
+      #num2{
+        position: absolute;
+        top: 1030px;
+        left: 1375px;
+      }
+      #comment3{
+        width: 30px;
+        height: 30px;
+      }
+      #page_p3{
+        position: absolute;
+        top: 1130px;
+        left: 1100px;
+      }
+      #a3{
+        position: absolute;
+        top: 1100px;
+        left: 300px;
+      }
+      #p3{
+        position: absolute;
+        top: 1130px;
+        left: 300px;
+      }
+      #comment3{
+        position: absolute;
+        top: 1145px;
+        left: 1335px;
+      }
+      #num3{
+        position: absolute;
+        top: 1130px;
+        left: 1375px;
+      }
+      #comment4{
+        width: 30px;
+        height: 30px;
+      }
+      #page_p4{
+        position: absolute;
+        top: 1230px;
+        left: 1100px;
+      }
+      #a4{
+        position: absolute;
+        top: 1200px;
+        left: 300px;
+      }
+      #p4{
+        position: absolute;
+        top: 1230px;
+        left: 300px;
+      }
+      #comment4{
+        position: absolute;
+        top: 1245px;
+        left: 1335px;
+      }
+      #num4{
+        position: absolute;
+        top: 1230px;
+        left: 1375px;
+      }
+      #comment5{
+        width: 30px;
+        height: 30px;
+      }
+      #page_p5{
+        position: absolute;
+        top: 1330px;
+        left: 1100px;
+      }
+      #a5{
+        position: absolute;
+        top: 1300px;
+        left: 300px;
+      }
+      #p5{
+        position: absolute;
+        top: 1330px;
+        left: 300px;
+      }
+      #comment5{
+        position: absolute;
+        top: 1345px;
+        left: 1335px;
+      }
+      #num5{
+        position: absolute;
+        top: 1330px;
+        left: 1375px;
+      }
+      #See_more{
+        position: absolute;
+        top: 1400px;
+        left: 300px;
+      }
+      
+      /*footer*/
+      #Jellycat{
+        position: absolute;
+        top: 1535px;
+        left: 300px;
+      }
+
+      #footer_div{
+        display: inline;
+      }
+      
+      /*language*/
+
+      #English_GB{
+        position: absolute;
+        top: 1555px;
+        left: 1300px;
+        border-style: none;
+        background-color: transparent;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      
+      #next{
+        width: 10px;
+        height: 10px;
+        transform: rotate(1.25turn);
+        position: absolute;
+        top: 1558px;
+        left: 1392px;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        display: inline-block;
+        position: absolute;
+        top: 1558px;
+        left: 1250px;
+      }
+
+      .lang {
+        display: inline-block;
+
+        border-radius: 4px;
+        padding: 10px 30px 10px 20px;
+        background-color: #ffffff;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .lang:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid black;
+      }
+
+      .lang:hover {
+         background-color: #eeeeee;
+      }
+
+      .dd-input {
+         display: none;
+      }
+
+      .lang-menu {
+        position: absolute;
+        top: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0;
+        margin: 2px 0 0 0;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+        background-color: #ffffff;
+        list-style-type: none;
+      }
+
+      .dd-input + .lang-menu {
+        display: none;
+      } 
+
+      .dd-input:checked + .lang-menu {
+        position: absolute;
+        display: block;
+        top: -90px;
+        right: 0px;
+      } 
+
+      .lang-menu li {
+        padding: 10px 20px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .lang-menu li:hover {
+        background-color: #f6f6f6;
+      }
+
+      .lang-menu li a {
+        display: block;
+        margin: -10px -20px;
+        padding: 10px 20px;
+      }
+
+      .lang-menu li.divider{
+      padding: 0;
+      border-bottom: 1px solid #cccccc;
+      }
+
+    </style>
+  </head>
+  <body id="body">
+    <header>
+      <div class="header_style">
+        <div class="logo">
+          <a href="http://127.0.0.1:5501/page_4.html"><img src="img/HOME_button.png" id="HOME_button" /></a>
+        </div>
+        <div class="menu">
+          <div class="menu"><a href="https://www.jellycat.com/eu/">Back To Store</a></div>
+          <div class="menu"><a href="https://jellycathelp.zendesk.com/hc/en-gb/requests/new">Contact Us</a></div>
+          <div class="menu"><a href="https://jellycathelp.zendesk.com/auth/v2/login/signin?return_to=https%3A%2F%2Fjellycathelp.zendesk.com%2Fhc%2Fen-gb&theme=hc&locale=en-gb&brand_id=360004527937&auth_origin=360004527937%2Cfalse%2Ctrue" class="menu">Sign in</a></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div>
+        <img src="img/octopus.png" id="octopus" />
+      </div>
+      <div class="search">
+        <input
+          type="search"
+          name="query"
+          id="search"
+          placeholder="Search"
+          autocomplete="off"
+          aria-label="Search"
+        />
+        <img src="img/search.svg" id="search_icon" />
+      </div>
+        <ul id="collect6">
+          <div style="display: flex; justify-content: space-evenly">
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6169903745297-Order-Help"><li class="p1"><p>Order Help</p></li></a>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6170190135441-Returns-Cancellations"><li class="p1"><p>Returns & Cancellations</p></li></a>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery"><li class="p1"><p>Shipping & Delivery</p></li></a>
+          </div>
+          <br>
+          <div style="display: flex; justify-content: space-evenly"">
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194584988305-Product-Information"><li class="p1"><p>Product Information</p></li></a>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194618709905-Payments-Refunds"><li class="p1"><p>Payments & Refunds</p></li></a>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194620059409-My-Account"><li class="p1"><p>My Account</p></li></a>
+          </div>
+        </ul>
+
+        <div id="border_top"></div>
+        <h2>Recent activity</h2>
+
+        <div>
+          <h3>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery" id="a1">Shipping & Delivery</a>
+          </h3>
+            
+            <p id="p1">Is it possible to track my order?</p>
+          <p id="page_p">Article created 10 months ago</p>
+          <img src="img/comment.png" id="comment">
+          <p id="num">0</p>
+        </div>
+        
+        <div>
+          <div id="border_top2"></div>
+          <h3>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery" id="a2">Shipping & Delivery</a>
+          </h3>
+            
+            <p id="p2">Is it possible to track my order?</p>
+          <p id="page_p2">Article created 10 months ago</p>
+          <img src="img/comment.png" id="comment2">
+          <p id="num2">0</p>
+        </div>
+
+        <div>
+          <div id="border_top3"></div>
+          <h3>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery" id="a3">Shipping & Delivery</a>
+          </h3>
+            
+            <p id="p3">Is it possible to track my order?</p>
+          <p id="page_p3">Article created 10 months ago</p>
+          <img src="img/comment.png" id="comment3">
+          <p id="num3">0</p>
+        </div>
+
+        <div>
+          <div id="border_top4"></div>
+          <h3>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery" id="a4">Shipping & Delivery</a>
+          </h3>
+            
+            <p id="p4">Is it possible to track my order?</p>
+          <p id="page_p4">Article created 10 months ago</p>
+          <img src="img/comment.png" id="comment4">
+          <p id="num4">0</p>
+        </div>
+
+        <div>
+          <div id="border_top5"> </div>
+          <h3>
+            <a href="https://jellycathelp.zendesk.com/hc/en-gb/sections/6194549437585-Shipping-Delivery" id="a5">Shipping & Delivery</a>
+          </h3>
+            
+            <p id="p5">Is it possible to track my order?</p>
+          <p id="page_p5">Article created 10 months ago</p>
+          <img src="img/comment.png" id="comment5">
+          <p id="num5">0</p>
+        </div>
+        <div id="border_top6"></div>
+        <a href="#" data-recent-activity-seemore id="See_more">See more</a>
+        <div id="border_bottom"></div>
+    </main>
+    <footer id="border_top7">
+      <div id="footer_div">
+        <p id="Jellycat">Jellycat</p>
+        <label class="dropdown">
+          <div class="lang">
+            English(GB)
+            <img src="img/next.png" id="next">
+          </div>
+
+          <input type="checkbox" class="dd-input" id="test">
+
+          <ul class="lang-menu">
+            <li><a href="https://jellycathelp.zendesk.com/hc/change_language/en-150?return_to=%2Fhc%2Fen-150">English (Europe)</a></li>
+            <li><a href="https://jellycathelp.zendesk.com/hc/change_language/en-us?return_to=%2Fhc%2Fen-us">English (US)</a></li>
+          </ul>
+        </label>
+      </div>
+    </footer>
+  </body>
+</html>
